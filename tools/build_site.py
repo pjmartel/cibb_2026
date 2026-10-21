@@ -93,7 +93,7 @@ f'''<main id="main"><div class="wrap">
 <h3><a href="slides.html">The structural evidence workflow</a></h3><p>Sequence information, model assessment, structural search, complexes, ensembles and design.</p>
 <a class="text-link" href="slides.html">View the lecture <span aria-hidden="true">→</span></a></article>
 <div><a class="material-link" href="notes.html"><div class="row"><h3>Student notes</h3><span class="arrow" aria-hidden="true">↗</span></div><p>A lecture companion with key distinctions, primary links and a downloadable notes template.</p></a>
-<a class="material-link" href="toolkit.html"><div class="row"><h3>PyMOL toolkit</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Set up PyMOL, fit a ligand with an explicit atom map, and inspect multi-model alignments.</p></a>
+<a class="material-link" href="toolkit.html"><div class="row"><h3>PyMOL toolkit</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Use Paulo Martel's symmetry-aware ligand comparison and structural-difference tools.</p></a>
 <a class="material-link" href="resources.html"><div class="row"><h3>Tools &amp; databases</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Official entry points for the tools used in the class, with access and interpretation notes.</p></a></div></div></section>
 <section class="practical-banner" aria-labelledby="practical-title"><div><span class="status">{"Materials available" if PRACTICAL_READY else "In preparation"}</span><h2 id="practical-title">The MnMT4 practical</h2>
 <p>{"The student worksheet, approved inputs and offline materials are available in the practical section." if PRACTICAL_READY else "A place for the student worksheet, approved inputs and offline materials. The activity will appear here once it has been designed and tested."}</p></div>
@@ -126,15 +126,16 @@ page("slides.html", "Lecture slides", "Browse the sixteen-slide lecture, use key
 
 toolkit_html, _ = md_file(ROOT / "pymol_scripts/README.md")
 toolkit_html = re.sub(r"<h1\b[^>]*>.*?</h1>", "", toolkit_html, count=1)
-page("toolkit.html", "PyMOL toolkit", "Install PyMOL and download the class visualisation helpers, example structures and documentation. Explicit atom maps and inspectable alignment reports.",
+page("toolkit.html", "PyMOL toolkit", "Download Paulo Martel's ligalign.py and struct_diff.py, with symmetry-aware ligand comparison and structural-difference examples.",
      f'''<main id="main" class="wrap">{heading("Visualisation / coordinate analysis","PyMOL toolkit","Small, inspectable helpers for working with structures. No docking, model generation or MnMT4 solutions are included.")}
 <div class="toolkit-lead"><section class="toolkit-panel"><p class="eyebrow">Software</p><h2>Get PyMOL</h2>
 <p>Use the official downloads and check your institutional licence. An open-source installation route is listed in the resource directory.</p>
 <a class="button" href="https://pymol.org/2/" target="_blank" rel="noopener noreferrer">Official PyMOL downloads ↗</a>
 <p class="resource-url">https://pymol.org/2/</p><a class="text-link" href="resources.html">Installation alternatives →</a></section>
-<section class="toolkit-panel"><p class="eyebrow">Class download</p><h2>Visualisation helpers</h2>
-<p>A rigid ligand aligner, a multiple-alignment analysis tool, starter commands and non-MnMT4 example structures.</p>
+<section class="toolkit-panel"><p class="eyebrow">Author-supplied tools</p><h2>ligalign &amp; struct_diff</h2>
+<p>Paulo Martel's standalone scripts, unchanged. Includes symmetry-aware benzene comparison and a myoglobin–leghemoglobin difference-mapping example.</p>
 <a class="button secondary" href="downloads/pymol-toolkit.zip" download>Download PyMOL toolkit</a>
+<p><a href="downloads/ligalign.py" download>ligalign.py</a> · <a href="downloads/struct_diff.py" download>struct_diff.py</a></p>
 <p>Python / PML · UTF-8 · Linux LF line endings</p></section></div>
 <article class="article toolkit-read">{toolkit_html}</article></main>''')
 
@@ -174,6 +175,8 @@ The site and notes therefore do not guarantee one returned hit per unique sequen
 
 External tools remain governed by their own licences and terms. PyMOL is not bundled, and this repository distributes no AI weights or service credentials.
 
+The class visualisation scripts, `ligalign.py` and `struct_diff.py`, were supplied by Paulo Martel and are included unchanged. Their downloadable copies and toolkit ZIP preserve the same source bytes; these scripts do not generate the lecture's molecular predictions.
+
 Typography uses Zodiak and Satoshi via [Fontshare](https://www.fontshare.com/), with system fallbacks. No blanket reuse licence has been selected for the original course material or helper code; consult the repository's licensing note before redistribution.
 '''
 sources_html = external_links(markdown.markdown(sources, extensions=["fenced_code"]))
@@ -183,6 +186,8 @@ page("sources.html", "Sources & reuse", "Coordinate references, search provenanc
 
 downloads = DOCS / "downloads"
 downloads.mkdir(exist_ok=True)
+for script in ("ligalign.py", "struct_diff.py"):
+    shutil.copy2(ROOT / "pymol_scripts" / script, downloads / script)
 write(downloads / "lecture-notes.md", (ROOT / "content/notes.md").read_text().replace("../docs/assets/", "../assets/"))
 shutil.copy2(ROOT / "content/student-notes-template.md", downloads / "student-notes-template.md")
 for filename, files, base in [

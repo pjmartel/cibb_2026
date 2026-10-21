@@ -1,0 +1,11 @@
+{
+  "provenance": "Standalone scripts supplied by the course owner, preserved byte-for-byte.",
+  "files": {
+    "ligalign.py": {
+      "sha256": "d149e9e8b106f8c0159071bf69a0b2df4c1d7b5b3e19a13c5ab842e1c3d41e25"
+    },
+    "struct_diff.py": {
+      "sha256": "5496868bd60493b6bdfac437ca7c3e8cdc4541d2f69130c4beecfd41dcb8000d"
+    }
+  }
+}

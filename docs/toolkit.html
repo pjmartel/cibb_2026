@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PyMOL toolkit | CIBB 2026</title><meta name="description" content="Install PyMOL and download the class visualisation helpers, example structures and documentation. Explicit atom maps and inspectable alignment reports.">
-<meta property="og:title" content="PyMOL toolkit"><meta property="og:description" content="Install PyMOL and download the class visualisation helpers, example structures and documentation. Explicit atom maps and inspectable alignment reports.">
+<title>PyMOL toolkit | CIBB 2026</title><meta name="description" content="Download Paulo Martel&#x27;s ligalign.py and struct_diff.py, with symmetry-aware ligand comparison and structural-difference examples.">
+<meta property="og:title" content="PyMOL toolkit"><meta property="og:description" content="Download Paulo Martel&#x27;s ligalign.py and struct_diff.py, with symmetry-aware ligand comparison and structural-difference examples.">
 <meta property="og:type" content="website"><meta property="og:image" content="assets/images/myoglobin.webp">
 <link rel="preconnect" href="https://api.fontshare.com"><link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link rel="stylesheet" href="assets/base.css"><link rel="stylesheet" href="assets/site.css">
@@ -14,66 +14,80 @@
 <p>Use the official downloads and check your institutional licence. An open-source installation route is listed in the resource directory.</p>
 <a class="button" href="https://pymol.org/2/" target="_blank" rel="noopener noreferrer">Official PyMOL downloads ↗</a>
 <p class="resource-url">https://pymol.org/2/</p><a class="text-link" href="resources.html">Installation alternatives →</a></section>
-<section class="toolkit-panel"><p class="eyebrow">Class download</p><h2>Visualisation helpers</h2>
-<p>A rigid ligand aligner, a multiple-alignment analysis tool, starter commands and non-MnMT4 example structures.</p>
+<section class="toolkit-panel"><p class="eyebrow">Author-supplied tools</p><h2>ligalign &amp; struct_diff</h2>
+<p>Paulo Martel's standalone scripts, unchanged. Includes symmetry-aware benzene comparison and a myoglobin–leghemoglobin difference-mapping example.</p>
 <a class="button secondary" href="downloads/pymol-toolkit.zip" download>Download PyMOL toolkit</a>
+<p><a href="downloads/ligalign.py" download>ligalign.py</a> · <a href="downloads/struct_diff.py" download>struct_diff.py</a></p>
 <p>Python / PML · UTF-8 · Linux LF line endings</p></section></div>
 <article class="article toolkit-read">
-<p>These scripts support inspection and explicitly defined coordinate operations. They do not dock ligands, infer chemical equivalence, generate AI structures or validate binding/catalysis.</p>
-<h2 id="setup">Setup</h2>
-<p>Install PyMOL from the <a target="_blank" rel="noopener noreferrer" href="https://pymol.org/2/">official download page</a>, checking your institution's licence arrangements. A separate <a target="_blank" rel="noopener noreferrer" href="https://github.com/schrodinger/pymol-open-source">open-source edition</a> is available, including a <a target="_blank" rel="noopener noreferrer" href="https://anaconda.org/conda-forge/pymol-open-source">conda-forge package</a>.</p>
+<p>The class uses <strong>Paulo Martel's supplied <code>ligalign.py</code> and <code>struct_diff.py</code></strong>, preserved byte-for-byte. No auxiliary data files are required by either script; the bundled structures and command files are optional teaching examples.</p>
+<h2 id="setup-and-help">Setup and help</h2>
+<p>Get PyMOL from the <a target="_blank" rel="noopener noreferrer" href="https://pymol.org/2/">official download page</a>, checking your institution's licence arrangements. A separate <a target="_blank" rel="noopener noreferrer" href="https://github.com/schrodinger/pymol-open-source">open-source edition</a> is available, including a <a target="_blank" rel="noopener noreferrer" href="https://anaconda.org/conda-forge/pymol-open-source">conda-forge package</a>.</p>
 <p>One open-source environment option on Linux is:</p>
 <pre><code class="language-bash">conda create -n cibb2026 -c conda-forge python=3.11 pymol-open-source numpy
 conda activate cibb2026
 pymol
 </code></pre>
-<p>The packaged helpers were tested using open-source PyMOL 3.2 in Python 3.11. A graphical PyMOL installation and a headless <code>pymol2</code> environment are different execution contexts; use the GUI for the class.</p>
-<p>From the repository root, start PyMOL and enter:</p>
+<p><code>ligalign.py</code> imports NumPy. RDKit is optional, only for its maximum-common-substructure route; the benzene example uses graph isomorphism without RDKit.</p>
+<p>Start PyMOL from the repository root, or the directory containing the extracted <code>pymol_scripts/</code> folder, then enter:</p>
 <pre><code class="language-pml">@pymol_scripts/startup.pml
+help ligalign
+help struct_diff
+help struct_diff_pairs
 </code></pre>
-<p>If using the ZIP download, extract it first and start from its top-level directory. Alternatively use absolute paths in PyMOL's <code>run</code> command.</p>
-<h2 id="rigid-ligand-aligner">Rigid ligand aligner</h2>
-<pre><code class="language-pml">run pymol_scripts/ligand_align.py
-ligand_align mobile and resn BNZ, reference and resn BNZ
+<p>Alternatively, run either standalone script directly with <code>run path/to/script.py</code>. The script headers contain the original help and attribution; references there to other manuals or commands are not runtime dependencies.</p>
+<h2 id="ligalign-symmetry-aware-ligand-comparison">ligalign: symmetry-aware ligand comparison</h2>
+<p><code>ligalign</code> derives atom correspondence from molecular graphs, rather than assuming identical atom names or order. For two benzene molecules, the isomorphism route evaluates the ring's symmetry-equivalent mappings; <code>method=iso</code> is a useful classroom choice because it prevents a silent fallback to names or atom order.</p>
+<h3 id="pose-rmsd-versus-fitted-geometry">Pose RMSD versus fitted geometry</h3>
+<p>For an experimental-versus-predicted complex comparison, first superpose the proteins, preserving each protein's ligand placement. Then evaluate the ligands <strong>without another fit</strong>:</p>
+<pre><code class="language-pml"># Template for your own loaded complexes, not a bundled Boltz prediction:
+super predicted_complex and polymer.protein, experimental_complex and polymer.protein
+ligalign predicted_complex and resn BNZ, experimental_complex and resn BNZ, method=iso, fit=0, verbose=2
 </code></pre>
-<p>With no atom map, both selections must have the same residue name and heavy-atom names. For different naming or different molecules, supply an explicit, one-to-one map of chemically equivalent atoms:</p>
-<pre><code class="language-pml">ligand_align mobile_ligand, reference_ligand, C1:C7|C2:C8|O1:O2, fitted_ligand, ligand
+<p>This is symmetry-aware ligand RMSD in the protein-aligned coordinate frame. Check the protein correspondence, selections, states and the reported six paired benzene heavy atoms.</p>
+<p>To ask a different question, how similar the ligand geometries are after their own best rigid fit, use:</p>
+<pre><code class="language-pml">ligalign predicted_complex and resn BNZ, experimental_complex and resn BNZ, method=iso, fit=1, transform=0
 </code></pre>
-<p>The syntax is:</p>
-<pre><code class="language-text">ligand_align mobile, reference, pairs=&quot;&quot;, output=ligand_fitted, scope=object, state=1
-</code></pre>
+<p><code>transform=0</code> calculates the fitted RMSD without moving the model. A small fitted-geometry RMSD does not establish a correct pose in the binding pocket.</p>
+<h3 id="movement-and-matching-rules">Movement and matching rules</h3>
 <ul>
-<li><code>scope=object</code> makes a new single-state copy of the complete mobile object and moves it as one rigid body, preserving protein–ligand geometry.</li>
-<li><code>scope=ligand</code> copies only the selected ligand residue.</li>
-<li>At least three non-collinear heavy-atom pairs are required; duplicate names, ambiguous conformers and element mismatches are rejected.</li>
-<li>Inputs are not overwritten. Choose a fresh output name for every run.</li>
-<li>The RMSD is for the mapped atom set after fitting. It is not docking accuracy, affinity or a reaction score.</li>
+<li>The default is <code>fit=1, transform=1</code>: it moves the <strong>whole mobile object</strong>, not just the selected ligand. Work on a copy, or use <code>fit=0</code> / <code>transform=0</code> as appropriate.</li>
+<li>The default ignores hydrogens and bond orders; it uses blank/A alternate locations. This accommodates unreliable PDB bond orders, but is not a stereochemical or protonation validation.</li>
+<li><code>method=auto</code> tries graph isomorphism, a distance-derived connectivity retry, optional RDKit MCS, then name/order fallbacks. Inspect the printed method rather than assuming every auto result is graph-verified.</li>
+<li>MCS RMSD concerns the common subset, not necessarily the whole ligand. RDKit must be installed in the same Python environment as PyMOL for that route.</li>
+<li><code>max_matches</code> limits enumeration; a cap warning means exhaustive symmetry search was not established. Do not promise a global minimum for arbitrary molecules after reaching that cap.</li>
+<li><code>mobile_state=0</code> evaluates all mobile states. Give explicit state numbers if the current frame is ambiguous.</li>
 </ul>
-<p>Atom-name agreement is only a convenience, not a proof of equivalent chemistry. Symmetric molecules can have several valid correspondences; this tool does not enumerate graph automorphisms or identify a minimum over them.</p>
-<p>Use <code>|</code> between pairs in PyMOL command lines. Python calls also accept <code>;</code>, but an unquoted semicolon is a command separator in PyMOL.</p>
-<h2 id="multiple-alignment-analysis">Multiple-alignment analysis</h2>
-<pre><code class="language-pml">run pymol_scripts/alignment_analysis.py
-class_multi_align reference, mobile1 mobile2, class_alignment
-alignment_report class_alignment, analysis-results/alignment, reference
+<h2 id="struct_diff-colour-local-structural-differences">struct_diff: colour local structural differences</h2>
+<p><code>struct_diff</code> compares <strong>two already superposed structures</strong>; it does not move or fit them. It colours per-residue RMS deviations or per-atom displacements, and <code>struct_diff_pairs</code> lets you inspect the correspondence before colouring.</p>
+<p>The globin example uses CA atoms and CE-based pairing, with no distance cutoff. This avoids making a geometric comparison depend on shared side-chain atom names or removing distant pairs with a cutoff:</p>
+<pre><code class="language-pml">load pymol_scripts/examples/myoglobin.pdb, myoglobin_source
+load pymol_scripts/examples/leghemoglobin.pdb, leghemoglobin_source
+create myoglobin_view, myoglobin_source
+create leghemoglobin_view, leghemoglobin_source
+cealign myoglobin_view, leghemoglobin_view, object=globin_alignment
+struct_diff_pairs leghemoglobin_view, myoglobin_view, atoms=name CA, method=cealign, show=resi 20-23
+struct_diff leghemoglobin_view, myoglobin_view, atoms=name CA, method=cealign, maximum=3.0
+set seq_view, 1
 </code></pre>
-<p><code>class_multi_align</code> creates fitted mobile copies with the <code>fit_</code> prefix and a CA alignment object, leaving the input mobiles unchanged. It uses PyMOL's sequence-based <code>align</code> with no outlier rejection, so it is not a replacement for a structural-search or distant-fold alignment method (<a target="_blank" rel="noopener noreferrer" href="https://pymolwiki.org/index.php/Align">PyMOL align documentation</a>).</p>
-<p>The helper builds reference-anchored columns: unmatched reference positions have missing mobile entries, while mobile insertions without a reference position are omitted. Use single-state objects, or first copy the state you want to inspect into state 1.</p>
-<p>CA fitting uses blank/A alternate locations, so alternative atoms are not counted twice as distinct residues. For another conformer choice, prepare a single-conformer source object first; the report rejects repeated CA residue positions.</p>
-<p>You may instead provide an existing CA alignment object containing two or more models:</p>
-<pre><code class="language-text">alignment_report alignment=class_alignment, prefix=analysis-results/alignment, reference=&quot;&quot;, state=1
-</code></pre>
-<p>Outputs are:</p>
+<p><code>cealign</code> takes <strong>target first, mobile second</strong>; <code>struct_diff</code> takes <strong>mobile first, target second</strong>. This local CE comparison is not the lecture's saved TM-align computation, so its numerical result need not be identical.</p>
+<h3 id="interpretation-and-data-preservation">Interpretation and data preservation</h3>
 <ul>
-<li><code>.columns.csv</code>: occupancy, residue-name consensus, agreement fraction, RMS coordinate dispersion and distances to the specified reference.</li>
-<li><code>.pairs.csv</code>: CA RMSD over each pair's common columns, in the current frame, with no additional fit.</li>
-<li><code>.summary.json</code>: model names, reference, column count and interpretation warnings.</li>
+<li><strong>B-values are overwritten in both compared selections.</strong> Keep the source objects untouched and colour copies, especially when B-values hold experimental displacement factors or prediction confidence.</li>
+<li>Blue-to-red is geometric deviation on the chosen ramp, not sequence identity, flexibility, energy or confidence. With <code>atoms=name CA</code> and residue mode, the residue colour represents its paired CA displacement.</li>
+<li>Sequence substitutions can be inspected in the sequence viewer and in the residue names printed by <code>struct_diff_pairs</code> or written to its report. The script does not separately colour substitutions or calculate an evolutionary conservation score.</li>
+<li>Default <code>method=spatial</code> proposes mutual-nearest CA pairs only within <code>radius=3.0</code>. A large displacement can therefore become <strong>unmatched</strong>, not a large red value.</li>
+<li>Unmatched atoms are green by default and have B-value <code>-1</code>; unmatched is not zero deviation. A positive <code>cutoff</code> also excludes distant pairs, so report those choices.</li>
+<li><code>maximum=3.0</code> fixes the displayed ramp at 0–3 Å; it does not truncate the values stored in B-factors or the report.</li>
+<li><code>report=path/to/globins.tsv</code> writes a residue table. Create its parent directory first, and use a fresh filename if you need to preserve an earlier report.</li>
 </ul>
-<p>Missing residues are reported as absent rather than zero distance. Dispersion depends on alignment and superposition; it is not a flexibility, dynamics or confidence measurement. Residue-name agreement among selected structures is not a population-based evolutionary conservation score.</p>
-<h2 id="try-the-bundled-demo">Try the bundled demo</h2>
-<pre><code class="language-pml">@pymol_scripts/examples/demo_helpers.pml
+<h2 id="run-the-supplied-demonstrations">Run the supplied demonstrations</h2>
+<p>Use a fresh session for the example object names:</p>
+<pre><code class="language-pml">@pymol_scripts/examples/demo_ligalign.pml
+@pymol_scripts/examples/demo_struct_diff.pml
 </code></pre>
-<p>The demo makes displaced copies of the same experimental lysozyme–benzene reference and fits them back. Near-zero RMSDs verify the coordinate operations; they do not demonstrate independent predictive accuracy.</p>
-<p>The separate myoglobin and leghemoglobin files are available for inspecting real structural differences. No MnMT4 structure, ligand pose or practical answer is included.</p></article></main><footer class="site-footer"><div class="wrap footer-inner">
+<p>Or run both with <code>@pymol_scripts/examples/demo_helpers.pml</code>. The benzene demo deliberately displaces and renames a copy of the same experimental molecule; it is a coordinate/mapping test, <strong>not Boltz output</strong> or an independent accuracy benchmark.</p>
+<p>The scripts are standalone; these PML files only save typing. No MnMT4 model, ligand pose or practical answer is included.</p></article></main><footer class="site-footer"><div class="wrap footer-inner">
 <p>CIBB 2026 · Tools for structural Bioinformatics</p>
 <p><a href="sources.html">Sources &amp; reuse</a><a href="resources.html">Resource directory</a></p>
 </div></footer></body></html>

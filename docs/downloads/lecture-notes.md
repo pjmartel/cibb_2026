@@ -50,6 +50,8 @@ The lecture compares the returned 1FSL chain B with 1MBN chain A, rather than si
 
 The historic 1MBN source includes a Gln A8 CA-chirality warning, so this example is for global fold comparison rather than a local stereochemical inference ([coordinate record](https://files.rcsb.org/download/1MBN.pdb)). Keep reference provenance separate from what the alignment itself measures.
 
+The class uses Paulo Martel's `struct_diff` to colour local geometric deviations after superposition, with `struct_diff_pairs` to inspect the pairing and residue names. It overwrites B-values, so use working copies; its colours are not confidence or sequence-identity scores, and sequence substitutions should also be inspected in the sequence viewer.
+
 ## Assemblies are hypotheses with components
 
 Before modelling an assembly, specify its chains and stoichiometry. The barnase–barstar illustration is experimental 1BRS biological assembly 1, not a newly predicted interaction ([1BRS](https://www.rcsb.org/structure/1BRS)).
@@ -59,6 +61,8 @@ Inter-chain confidence, contacts and clashes are useful inspection targets in a 
 ## Binding plausibility is not catalysis
 
 The T4 lysozyme L99A–benzene images are experimental reference views from 4W52, not Boltz output ([4W52](https://www.rcsb.org/structure/4W52)). The modelling workflow on the slide is a schematic, and structural-confidence and affinity outputs are separate quantities ([Boltz input/output guide](https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md)).
+
+For ligand comparisons, the class uses Paulo Martel's symmetry-aware `ligalign`. Its `fit=0` option measures displacement in the current protein-aligned frame; `fit=1` measures a different quantity after fitting the ligands themselves, and moves the whole mobile object unless `transform=0` is specified.
 
 For generic SAM methyl transfer, identify the acceptor oxygen, transferring methyl carbon and sulfur leaving group; the relevant geometry includes O–C distance and the O–C–S angle with the methyl carbon as vertex ([mechanistic study](https://pmc.ncbi.nlm.nih.gov/articles/PMC6503465/)). Do not turn an idealised in-line concept into one universal numerical cutoff or infer a reaction rate from a static pose.
 

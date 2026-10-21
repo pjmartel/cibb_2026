@@ -27,11 +27,46 @@ Replace `YOUR_GITHUB_USERNAME`; no account name is hardcoded into the website or
 
 ## Enable GitHub Pages
 
-In the GitHub repository, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. Then run the **Validate and deploy course** workflow under Actions, or push another commit to `main`; the supplied workflow builds, checks and deploys **only `docs/`** ([GitHub Pages custom-workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)).
+The archive already includes a custom workflow at `.github/workflows/pages.yml`, named **Validate and deploy course**. This is a workflow supplied with this repository, not an action to search for in the GitHub Marketplace.
+
+1. First, open the repository's **Code** tab and check that `.github/workflows/pages.yml` exists at the repository root, alongside `docs/`, `content/` and `README.md`. Do not upload the ZIP itself as the repository contents or put the entire course inside an extra nested `CIBB_2026/` folder.
+2. Open **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**. GitHub may show template suggestions such as Static HTML and Jekyll; skip the templates because this repository already supplies its own publishing workflow ([GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
+3. Leave Settings and click the repository's top-level **Actions** tab. In its left sidebar, select **Validate and deploy course**. Do not use the **New workflow** template gallery or Marketplace search to find this custom workflow.
+4. Click **Run workflow**, choose `main`, and confirm **Run workflow**. The manual-run button requires the workflow's `workflow_dispatch` configuration to be present on the repository's default branch; the supplied YAML includes this configuration ([GitHub's manual-run instructions](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)).
+5. Open the run to see its build and deploy jobs. The supplied workflow builds, checks and deploys **only `docs/`**; future pushes to `main` also trigger it.
+
+If the custom workflow is missing from the Actions sidebar, first check the file in the **Code** tab rather than choosing a template. `.github/` is a hidden directory on Linux and can be missed when copying only visible files. From the local repository root, check:
+
+```bash
+ls -l .github/workflows/pages.yml
+git status --short
+```
+
+If the file exists locally but is absent from GitHub, commit and push it:
+
+```bash
+git add .github/workflows/pages.yml
+git commit -m "Add course Pages workflow"
+git push
+```
+
+If the file is already tracked, Git may correctly report nothing to commit; confirm you pushed the correct branch and remote instead. If GitHub shows the course files inside an extra nested directory, fix the repository layout so `.github/` and `docs/` are at the top level.
+
+If an older copy of the workflow fails during Python setup with `No file ... matched to [**/requirements.txt or **/pyproject.toml]`, add `cache-dependency-path: requirements-dev.txt` beneath `cache: pip`, at the same indentation level. This repository uses a custom dependency filename, which must be named explicitly for caching ([setup-python caching documentation](https://github.com/actions/setup-python)).
+
+```yaml
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+```
+
+Commit the workflow change to `main` and inspect the new run. The corrected workflow is already included in this archive; no Pages source-setting change is needed for this error.
 
 GitHub reports the final Pages address in the deployment. A project site normally sits under the repository name, so all internal assets and links use relative paths rather than assuming a domain-root deployment ([GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages)).
 
-For a branch-based alternative, the already-generated site can be published from `main` and `/docs`; use only one deployment method. GitHub Actions is the default supplied here.
+For a branch-based alternative, the already-generated site can be published by selecting **Deploy from a branch**, choosing `main` and `/docs`, and clicking **Save** ([GitHub's branch-publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)). Use only one deployment method: disable the custom publishing workflow if switching to branch publishing, and rebuild and commit `docs/` after future source edits. GitHub Actions is the default supplied here.
 
 ## Repository tree
 
@@ -62,8 +97,9 @@ CIBB_2026/
 │   ├── site.js
 │   └── slides.js
 ├── pymol_scripts/
-│   ├── ligand_align.py          # Explicit atom correspondences + rigid fit
-│   ├── alignment_analysis.py    # Multi-model alignment and CSV reports
+│   ├── ligalign.py              # Owner's symmetry-aware ligand comparison
+│   ├── struct_diff.py           # Owner's post-superposition difference viewer
+│   ├── source-manifest.json     # Checksums of the unchanged supplied scripts
 │   ├── startup.pml
 │   ├── README.md
 │   └── examples/                # Non-MnMT4 demonstration structures
@@ -108,12 +144,14 @@ The slide viewer reads the local slide manifest; source PNG/SVG pairs are in `do
 
 Read `pymol_scripts/README.md` before using the helpers. They do not install PyMOL or perform an AI prediction; they support explicit, inspectable visualisation and analysis operations.
 
-- **Ligand fitting:** Produces a new fitted copy, preserves the original, requires chemically defensible atom correspondence and reports the RMSD of the fitted atom set.
-- **Multiple alignment analysis:** Produces CSV/JSON summaries of an existing CA alignment, plus an optional alignment-building command. Coordinate dispersion is not model confidence, flexibility or an evolutionary coupling score.
+- **ligalign.py:** Paulo Martel's graph- and symmetry-aware ligand comparison, with distinct in-place and fitted RMSDs. By default it moves the whole mobile object; choose `fit=0` or `transform=0` for non-moving comparisons.
+- **struct_diff.py:** Paulo Martel's pairwise geometric-difference colouring after superposition, with correspondence diagnostics and a TSV report option. It overwrites B-values in the working selections, so the examples use copies.
 
-The examples are experimental non-MnMT4 references or explicitly transformed copies. Pure mathematical tests run with NumPy; optional integration tests use `pymol2` when it is installed.
+Both supplied scripts are unchanged, with source hashes recorded in `pymol_scripts/source-manifest.json`. Their embedded help remains authoritative; neither needs auxiliary files, and RDKit is optional for the ligand MCS route rather than the benzene graph-isomorphism example.
 
-The supplied version passed all seven tests in an open-source PyMOL 3.2 / Python 3.11 environment, including the real PyMOL command-line demo. Without PyMOL, the four numerical tests run and the three integration tests are skipped.
+The examples are experimental non-MnMT4 references or explicitly transformed copies, not Boltz predictions. Numerical tests exercise the actual supplied pure functions with NumPy; optional `pymol2` integration tests exercise both tools and the real PyMOL command-line demonstrations.
+
+For an existing checkout, see `UPDATE-PYMOL.md` for the small update archive and the two superseded files to remove. Do not overwrite your `.git` directory or change your working Pages configuration.
 
 To create a fresh source ZIP after an update, run `python tools/package_repo.py`. It validates the site, then writes `CIBB_2026.zip` and its SHA-256 sidecar one directory above the repository, omitting Git history, local environments, caches and generated analysis reports.
 

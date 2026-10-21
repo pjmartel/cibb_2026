@@ -4,7 +4,9 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 from zipfile import ZipFile
 import ast
+from hashlib import sha256
 import json
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -110,7 +112,39 @@ for path in (DOCS / "downloads").glob("*.zip"):
 expected = {"index.html", "notes.html", "slides.html", "practical.html", "toolkit.html", "resources.html", "sources.html"}
 if set(pages) != expected:
     errors.append("Unexpected public page set")
+source_manifest = ROOT / "pymol_scripts/source-manifest.json"
+if not source_manifest.is_file():
+    errors.append("Missing author-script source manifest")
+else:
+    supplied = json.loads(source_manifest.read_text())["files"]
+    for filename, entry in supplied.items():
+        for location in (ROOT / "pymol_scripts", DOCS / "downloads"):
+            script = location / filename
+            if not script.is_file() or sha256(script.read_bytes()).hexdigest() != entry["sha256"]:
+                errors.append(f"Supplied source differs or is missing: {script.relative_to(ROOT)}")
+    toolkit = DOCS / "downloads/pymol-toolkit.zip"
+    with ZipFile(toolkit) as archive:
+        for filename, entry in supplied.items():
+            member = "pymol_scripts/" + filename
+            if member not in archive.namelist() or sha256(archive.read(member)).hexdigest() != entry["sha256"]:
+                errors.append(f"Supplied source differs inside toolkit ZIP: {filename}")
+    for obsolete in ("ligand_align.py", "alignment_analysis.py"):
+        if (ROOT / "pymol_scripts" / obsolete).exists():
+            errors.append(f"Superseded helper still present: {obsolete}")
+        if "pymol_scripts/" + obsolete in archive.namelist():
+            errors.append(f"Superseded helper still in toolkit ZIP: {obsolete}")
+workflow_path = ROOT / ".github/workflows/pages.yml"
+if not workflow_path.is_file():
+    errors.append("Missing GitHub Pages workflow at repository root")
+else:
+    workflow = workflow_path.read_text(encoding="utf-8")
+    if re.search(r"^\s+cache:\s*['\"]?pip['\"]?\s*$", workflow, re.MULTILINE):
+        dependency = re.search(r"^\s+cache-dependency-path:\s*([^\s#]+)", workflow, re.MULTILINE)
+        if not dependency:
+            errors.append("Pip cache must explicitly name the course dependency manifest with cache-dependency-path")
+        elif not (ROOT / dependency.group(1).strip("'\"")).is_file():
+            errors.append("Pip cache dependency manifest does not exist at the configured path")
 if errors:
     print("\n".join(errors), file=sys.stderr)
     raise SystemExit(1)
-print(f"PASS: {len(pages)} pages, {len(slides)} slides, {text_files} UTF-8/LF text files, local links and ZIPs valid.")
+print(f"PASS: {len(pages)} pages, {len(slides)} slides, {text_files} UTF-8/LF text files, local links, ZIPs and workflow cache path valid.")
