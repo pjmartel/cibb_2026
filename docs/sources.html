@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources &amp; reuse | CIBB 2026</title><meta name="description" content="Coordinate references, search provenance, software terms and attribution for Tools for structural Bioinformatics.">
+<meta property="og:title" content="Sources &amp; reuse"><meta property="og:description" content="Coordinate references, search provenance, software terms and attribution for Tools for structural Bioinformatics.">
+<meta property="og:type" content="website"><meta property="og:image" content="assets/images/myoglobin.webp">
+<link rel="preconnect" href="https://api.fontshare.com"><link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="assets/base.css"><link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav-wrap"><a class="wordmark" href="index.html">CIBB<span> / 2026</span></a>
+<button class="menu-toggle" data-menu aria-expanded="false" aria-controls="main-navigation">Menu</button>
+<nav id="main-navigation" class="main-nav" aria-label="Primary"><a href="notes.html">Student notes</a><a href="slides.html">Slides</a><a href="practical.html">Practical</a><a href="toolkit.html">PyMOL toolkit</a><a href="resources.html">Resources</a></nav></div></header><main id="main" class="wrap"><div class="page-head"><p class="eyebrow">Attribution</p><h1>Sources &amp; reuse</h1><p>Reference provenance and reuse information for the lecture and its molecular examples.</p>
+</div><article class="article" style="padding-bottom:var(--space-16)"><h2>Data and molecular figures</h2>
+<p>The molecular illustrations are renderings of actual coordinate references, not generated protein shapes. The lecture retains experimental-versus-predicted labels and separates illustrative workflows from computed results.</p>
+<ul>
+<li>Myoglobin: <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/1MBN">1MBN</a>.</li>
+<li>Leghemoglobin: <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/1FSL">1FSL</a>.</li>
+<li>Calmodulin experimental comparison: <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/1CLL">1CLL</a>; prediction and confidence data: <a target="_blank" rel="noopener noreferrer" href="https://alphafold.ebi.ac.uk/files/AF-P0DP23-F1-model_v6.cif">AlphaFold model</a>.</li>
+<li>Barnase–barstar: <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/1BRS">1BRS</a>, the displayed biological assembly.</li>
+<li>Lysozyme–benzene: <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/4W52">4W52</a>.</li>
+<li>Adenylate kinase: <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/4AKE">4AKE</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.rcsb.org/structure/1AKE">1AKE</a>.</li>
+<li>Constrained-design illustration: <a target="_blank" rel="noopener noreferrer" href="https://github.com/RosettaCommons/RFdiffusion/blob/main/examples/design_ppi.sh">classic RFdiffusion input example</a>, explicitly a provided target model, not a newly generated binder.</li>
+</ul>
+<h2>Search provenance and limits</h2>
+<p>The Foldseek example uses a saved 1MBN-chain-A query against PDB100, with server-reported version <code>20240101</code> (<a target="_blank" rel="noopener noreferrer" href="https://search.foldseek.com/api/databases">server metadata</a>). Identical full-length myoglobin sequences occur in the returned list; the exact reason for their retention in that monomer job has not been established (<a target="_blank" rel="noopener noreferrer" href="https://search.foldseek.com/api/result/9JUQmuFtzzCi-ufQrRv0mkHE562y671NBHSwsw/0">saved response</a>).</p>
+<p>The site and notes therefore do not guarantee one returned hit per unique sequence. The lecture's displayed search and alignment numbers are preserved, rather than replaced by a new live search.</p>
+<h2>Software, fonts and reuse</h2>
+<p>External tools remain governed by their own licences and terms. PyMOL is not bundled, and this repository distributes no AI weights or service credentials.</p>
+<p>Typography uses Zodiak and Satoshi via <a target="_blank" rel="noopener noreferrer" href="https://www.fontshare.com/">Fontshare</a>, with system fallbacks. No blanket reuse licence has been selected for the original course material or helper code; consult the repository's licensing note before redistribution.</p></article></main><footer class="site-footer"><div class="wrap footer-inner">
+<p>CIBB 2026 · Tools for structural Bioinformatics</p>
+<p><a href="sources.html">Sources &amp; reuse</a><a href="resources.html">Resource directory</a></p>
+</div></footer></body></html>

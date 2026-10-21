@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-21T15:08:19.480719</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 46.4832 461.214 
+L 650.4768 461.214 
+Q 665.8848 461.214 665.8848 453.924 
+L 665.8848 168.156 
+Q 665.8848 160.866 650.4768 160.866 
+L 46.4832 160.866 
+Q 31.0752 160.866 31.0752 168.156 
+L 31.0752 453.924 
+Q 31.0752 461.214 46.4832 461.214 
+z
+" clip-path="url(#p39e91bb518)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="74.2176" y="201.485344" transform="rotate(-0 74.2176 201.485344)">Known inputs</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="74.2176" y="252.330281" transform="rotate(-0 74.2176 252.330281)">Protein</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="74.2176" y="278.893934" transform="rotate(-0 74.2176 278.893934)">MnMT4, 305 residues | V5X766</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="74.2176" y="319.398281" transform="rotate(-0 74.2176 319.398281)">Cofactor</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="74.2176" y="345.907247" transform="rotate(-0 74.2176 345.907247)">S-adenosylmethionine (SAM)</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="74.2176" y="386.466281" transform="rotate(-0 74.2176 386.466281)">Substrate comparison</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="74.2176" y="412.975247" transform="rotate(-0 74.2176 412.975247)">3-OPC; optional 3-indoleacrylic acid</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 712.512 461.214 
+L 1107.648 461.214 
+Q 1117.728 461.214 1117.728 453.924 
+L 1117.728 168.156 
+Q 1117.728 160.866 1107.648 160.866 
+L 712.512 160.866 
+Q 702.432 160.866 702.432 168.156 
+L 702.432 453.924 
+Q 702.432 461.214 712.512 461.214 
+z
+" clip-path="url(#p0dfc15763e)" style="fill: #f0edf8"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="736.704" y="201.485344" transform="rotate(-0 736.704 201.485344)">Your deliverable</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="736.704" y="265.305906" transform="rotate(-0 736.704 265.305906)">2</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="809.28" y="261.669656" transform="rotate(-0 809.28 261.669656)">defensible observations</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="736.704" y="338.205906" transform="rotate(-0 736.704 338.205906)">1</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="809.28" y="334.569656" transform="rotate(-0 809.28 334.569656)">unresolved inference</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="736.704" y="411.105906" transform="rotate(-0 736.704 411.105906)">1</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="809.28" y="407.469656" transform="rotate(-0 809.28 407.469656)">discriminating experiment</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_4">
+    <path d="M 49.4208 537.2244 
+L 376.8192 537.2244 
+Q 385.1712 537.2244 385.1712 536.0904 
+L 385.1712 491.6376 
+Q 385.1712 490.5036 376.8192 490.5036 
+L 49.4208 490.5036 
+Q 41.0688 490.5036 41.0688 491.6376 
+L 41.0688 536.0904 
+Q 41.0688 537.2244 49.4208 537.2244 
+z
+" clip-path="url(#pf0c125c1b4)" style="fill: #edf2fa"/>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0053d6" x="213.12" y="516.851754" transform="rotate(-0 213.12 516.851754)">Protein</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_5">
+    <path d="M 412.3008 537.2244 
+L 739.6992 537.2244 
+Q 748.0512 537.2244 748.0512 536.0904 
+L 748.0512 491.6376 
+Q 748.0512 490.5036 739.6992 490.5036 
+L 412.3008 490.5036 
+Q 403.9488 490.5036 403.9488 491.6376 
+L 403.9488 536.0904 
+Q 403.9488 537.2244 412.3008 537.2244 
+z
+" clip-path="url(#p3a5e50a9c1)" style="fill: #edf2fa"/>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0053d6" x="576" y="516.851754" transform="rotate(-0 576 516.851754)">Protein + SAM</text>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_6">
+    <path d="M 775.1808 537.2244 
+L 1102.5792 537.2244 
+Q 1110.9312 537.2244 1110.9312 536.0904 
+L 1110.9312 491.6376 
+Q 1110.9312 490.5036 1102.5792 490.5036 
+L 775.1808 490.5036 
+Q 766.8288 490.5036 766.8288 491.6376 
+L 766.8288 536.0904 
+Q 766.8288 537.2244 775.1808 537.2244 
+z
+" clip-path="url(#p8a67e79a3b)" style="fill: #edf2fa"/>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0053d6" x="938.88" y="516.851754" transform="rotate(-0 938.88 516.851754)">Protein + SAM + substrate</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="40.32" y="34.344" transform="rotate(-0 40.32 34.344)">PRACTICAL HANDOVER | SLIDE 16</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 27px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="40.32" y="74.52" transform="rotate(-0 40.32 74.52)">Your investigation begins here.</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="104.976" transform="rotate(-0 40.32 104.976)">MnMT4 | UniProt V5X766 | Investigate structural evidence, not a predetermined answer.</text>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 14.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="57.6" y="575.424" transform="rotate(-0 57.6 575.424)">Which conclusions are defensible, and what evidence is still missing?</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="620.136" transform="rotate(-0 40.32 620.136)">Accession and length: https://www.uniprot.org/uniprotkb/V5X766/entry | Biochemical inputs supplied for the practical.</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="633.744" transform="rotate(-0 40.32 633.744)">Compare models prepared under different input conditions. No target structure, neighbours, residue correspondences or ligand interpretation is revealed.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p39e91bb518">
+   <rect x="40.32" y="165.24" width="616.32" height="291.6"/>
+  </clipPath>
+  <clipPath id="p0dfc15763e">
+   <rect x="708.48" y="165.24" width="403.2" height="291.6"/>
+  </clipPath>
+  <clipPath id="pf0c125c1b4">
+   <rect x="46.08" y="491.184" width="334.08" height="45.36"/>
+  </clipPath>
+  <clipPath id="p3a5e50a9c1">
+   <rect x="408.96" y="491.184" width="334.08" height="45.36"/>
+  </clipPath>
+  <clipPath id="p8a67e79a3b">
+   <rect x="771.84" y="491.184" width="334.08" height="45.36"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "title": "Tools for structural Bioinformatics",
+  "repository": "CIBB_2026",
+  "year": 2026,
+  "lecture_minutes": 45,
+  "practical_minutes": 45,
+  "practical_status": "in-preparation",
+  "audience": "MSc, PhD and research-level bioscience students",
+  "resources": [
+    {"name":"PyMOL","category":"Setup","url":"https://pymol.org/2/","description":"Official graphical molecular-visualisation software and downloads. Check institutional or commercial licence availability."},
+    {"name":"Open-source PyMOL","category":"Setup","url":"https://github.com/schrodinger/pymol-open-source","description":"Source code and build information for the open-source edition; a separate option from the licensed bundles."},
+    {"name":"PyMOL on conda-forge","category":"Setup","url":"https://anaconda.org/conda-forge/pymol-open-source","description":"Community package route for installing open-source PyMOL in a dedicated environment."},
+    {"name":"PyMOL command reference","category":"Setup","url":"https://pymolwiki.org/index.php/Category:Commands","description":"Selections, representations, alignment commands and scripting reference."},
+    {"name":"UniProt","category":"Sequence & structure","url":"https://www.uniprot.org/","description":"Start with an accession, sequence and biological annotations; record the exact construct used."},
+    {"name":"RCSB Protein Data Bank","category":"Sequence & structure","url":"https://www.rcsb.org/","description":"Experimental structure entries, biological assemblies, ligands and primary citations."},
+    {"name":"AlphaFold Database","category":"Sequence & structure","url":"https://alphafold.ebi.ac.uk/","description":"Retrieve existing predicted models and inspect their confidence and provenance."},
+    {"name":"AlphaFold Server","category":"Complexes","url":"https://alphafoldserver.com/","description":"A hosted prediction interface. Check current access terms, accepted inputs and limits before using it."},
+    {"name":"AlphaFold confidence guide","category":"Sequence & structure","url":"https://alphafoldserver.com/guides","description":"Interpret pLDDT, PAE and interface-confidence estimates without equating them to experimental evidence."},
+    {"name":"Foldseek Search Server","category":"Comparison","url":"https://search.foldseek.com/","description":"Search structures against PDB100 and other collections. Redundancy reduction is not a guarantee of one returned hit per unique sequence."},
+    {"name":"Foldseek documentation","category":"Comparison","url":"https://github.com/steineggerlab/foldseek","description":"Local searches, alignment modes, output definitions and clustering documentation."},
+    {"name":"Boltz","category":"Complexes","url":"https://github.com/jwohlwend/boltz","description":"Boltz-2 code and documentation for biomolecular predictions; inference requires suitable compute and setup."},
+    {"name":"Boltz input guide","category":"Complexes","url":"https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md","description":"Specify protein and ligand components and distinguish structural-confidence outputs from affinity predictions."},
+    {"name":"EVcouplings","category":"Sequence & structure","url":"https://evcouplings.org/","description":"Evolutionary sequence analysis and coupling-based structural hypotheses."},
+    {"name":"ESM","category":"Sequence & structure","url":"https://github.com/Biohub/esm","description":"Protein language-model representations and structure-prediction documentation."},
+    {"name":"BioEmu","category":"Ensembles & design","url":"https://github.com/microsoft/bioemu","description":"Approximate equilibrium conformational sampling. Samples are not time-ordered molecular-dynamics trajectories."},
+    {"name":"RFdiffusion","category":"Ensembles & design","url":"https://github.com/RosettaCommons/RFdiffusion","description":"Classic constrained backbone and binder-design workflows; the lecture shows documented inputs, not a newly generated binder."},
+    {"name":"RFdiffusion3 overview","category":"Ensembles & design","url":"https://www.ipd.uw.edu/2025/12/rfdiffusion3-now-available/","description":"Atom-level chemical-interaction constraints in a newer design framework; do not assume classic scripts are interchangeable."}
+  ]
+}

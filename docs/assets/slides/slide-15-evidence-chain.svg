@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-21T15:08:19.038618</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 42.2784 276.9552 
+L 234.2016 276.9552 
+Q 239.0976 276.9552 239.0976 274.3632 
+L 239.0976 172.7568 
+Q 239.0976 170.1648 234.2016 170.1648 
+L 42.2784 170.1648 
+Q 37.3824 170.1648 37.3824 172.7568 
+L 37.3824 274.3632 
+Q 37.3824 276.9552 42.2784 276.9552 
+z
+" clip-path="url(#p5766291518)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="54.0288" y="207.794925" transform="rotate(-0 54.0288 207.794925)">Sequence evidence</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="54.0288" y="247.215347" transform="rotate(-0 54.0288 247.215347)">EVcouplings / ESM</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 261.1584 276.9552 
+L 453.0816 276.9552 
+Q 457.9776 276.9552 457.9776 274.3632 
+L 457.9776 172.7568 
+Q 457.9776 170.1648 453.0816 170.1648 
+L 261.1584 170.1648 
+Q 256.2624 170.1648 256.2624 172.7568 
+L 256.2624 274.3632 
+Q 256.2624 276.9552 261.1584 276.9552 
+z
+" clip-path="url(#pc33e6a533f)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0053d6" x="272.9088" y="207.793988" transform="rotate(-0 272.9088 207.793988)">Structure</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="272.9088" y="247.215347" transform="rotate(-0 272.9088 247.215347)">AlphaFold</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_4">
+    <path d="M 480.0384 276.9552 
+L 671.9616 276.9552 
+Q 676.8576 276.9552 676.8576 274.3632 
+L 676.8576 172.7568 
+Q 676.8576 170.1648 671.9616 170.1648 
+L 480.0384 170.1648 
+Q 475.1424 170.1648 475.1424 172.7568 
+L 475.1424 274.3632 
+Q 475.1424 276.9552 480.0384 276.9552 
+z
+" clip-path="url(#pc975deca4b)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="491.7888" y="207.794925" transform="rotate(-0 491.7888 207.794925)">Comparison</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="491.7888" y="247.215347" transform="rotate(-0 491.7888 247.215347)">Foldseek / alignment</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_5">
+    <path d="M 698.9184 276.9552 
+L 890.8416 276.9552 
+Q 895.7376 276.9552 895.7376 274.3632 
+L 895.7376 172.7568 
+Q 895.7376 170.1648 890.8416 170.1648 
+L 698.9184 170.1648 
+Q 694.0224 170.1648 694.0224 172.7568 
+L 694.0224 274.3632 
+Q 694.0224 276.9552 698.9184 276.9552 
+z
+" clip-path="url(#pe39a69f266)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="710.6688" y="207.794925" transform="rotate(-0 710.6688 207.794925)">Interactions</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="710.6688" y="247.215347" transform="rotate(-0 710.6688 247.215347)">AF3 / Boltz-2</text>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_6">
+    <path d="M 917.7984 276.9552 
+L 1109.7216 276.9552 
+Q 1114.6176 276.9552 1114.6176 274.3632 
+L 1114.6176 172.7568 
+Q 1114.6176 170.1648 1109.7216 170.1648 
+L 917.7984 170.1648 
+Q 912.9024 170.1648 912.9024 172.7568 
+L 912.9024 274.3632 
+Q 912.9024 276.9552 917.7984 276.9552 
+z
+" clip-path="url(#p1375849ed6)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #e6613e" x="929.5488" y="207.794925" transform="rotate(-0 929.5488 207.794925)">Beyond one model</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="929.5488" y="247.215347" transform="rotate(-0 929.5488 247.215347)">BioEmu / RFdiffusion</text>
+   </g>
+  </g>
+  <g id="axes_6">
+   <g id="patch_7">
+    <path d="M 786.6432 534.276 
+L 1108.3968 534.276 
+Q 1116.6048 534.276 1116.6048 529.416 
+L 1116.6048 338.904 
+Q 1116.6048 334.044 1108.3968 334.044 
+L 786.6432 334.044 
+Q 778.4352 334.044 778.4352 338.904 
+L 778.4352 529.416 
+Q 778.4352 534.276 786.6432 534.276 
+z
+" clip-path="url(#p9cc6585e9a)" style="fill: #e6f2f2"/>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="806.3424" y="366.277969" transform="rotate(-0 806.3424 366.277969)">An evidence-based conclusion</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="806.3424" y="412.658844" transform="rotate(-0 806.3424 412.658844)">2</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="858.8736" y="409.671949" transform="rotate(-0 858.8736 409.671949)">defensible observations</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="806.3424" y="457.370844" transform="rotate(-0 806.3424 457.370844)">1</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="858.8736" y="454.383949" transform="rotate(-0 858.8736 454.383949)">unresolved inference</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="806.3424" y="502.082844" transform="rotate(-0 806.3424 502.082844)">1</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="858.8736" y="499.095949" transform="rotate(-0 858.8736 499.095949)">discriminating experiment</text>
+   </g>
+  </g>
+  <g id="patch_8">
+   <path d="M 241.617375 223.56 
+Q 246.528556 223.56 249.427275 223.56 
+" style="fill: none; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 243.427275 220.56 
+L 249.427275 223.56 
+L 243.427275 226.56 
+z
+" style="fill: #586a77; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="patch_9">
+   <path d="M 460.497375 223.56 
+Q 465.408556 223.56 468.307275 223.56 
+" style="fill: none; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 462.307275 220.56 
+L 468.307275 223.56 
+L 462.307275 226.56 
+z
+" style="fill: #586a77; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="patch_10">
+   <path d="M 679.377375 223.56 
+Q 684.288556 223.56 687.187275 223.56 
+" style="fill: none; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 681.187275 220.56 
+L 687.187275 223.56 
+L 681.187275 226.56 
+z
+" style="fill: #586a77; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="patch_11">
+   <path d="M 898.257375 223.56 
+Q 903.168556 223.56 906.067275 223.56 
+" style="fill: none; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 900.067275 220.56 
+L 906.067275 223.56 
+L 900.067275 226.56 
+z
+" style="fill: #586a77; stroke: #586a77; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="40.32" y="34.344" transform="rotate(-0 40.32 34.344)">SYNTHESIS | SLIDE 15</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 27px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="40.32" y="74.52" transform="rotate(-0 40.32 74.52)">Build an evidence chain, not a gallery of models.</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="104.976" transform="rotate(-0 40.32 104.976)">The question determines the method; this is not a mandatory sequence of software.</text>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="57.6" y="338.256" transform="rotate(-0 57.6 338.256)">Three questions to carry into every analysis</text>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="57.6" y="397.872" transform="rotate(-0 57.6 397.872)">01</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="97.92" y="397.872" transform="rotate(-0 97.92 397.872)">What supports this model?</text>
+  </g>
+  <g id="text_24">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="57.6" y="457.488" transform="rotate(-0 57.6 457.488)">02</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="97.92" y="457.488" transform="rotate(-0 97.92 457.488)">What conclusion does it actually support?</text>
+  </g>
+  <g id="text_26">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="57.6" y="517.104" transform="rotate(-0 57.6 517.104)">03</text>
+  </g>
+  <g id="text_27">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="97.92" y="517.104" transform="rotate(-0 97.92 517.104)">What experiment could change the interpretation?</text>
+  </g>
+  <g id="text_28">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="620.136" transform="rotate(-0 40.32 620.136)">Synthesis of the methods discussed. Tool names identify questions and outputs, not guarantees or a performance ranking.</text>
+  </g>
+  <g id="text_29">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="633.744" transform="rotate(-0 40.32 633.744)">Observations, computational predictions and biological hypotheses should remain distinguishable.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5766291518">
+   <rect x="40.32" y="171.72" width="195.84" height="103.68"/>
+  </clipPath>
+  <clipPath id="pc33e6a533f">
+   <rect x="259.2" y="171.72" width="195.84" height="103.68"/>
+  </clipPath>
+  <clipPath id="pc975deca4b">
+   <rect x="478.08" y="171.72" width="195.84" height="103.68"/>
+  </clipPath>
+  <clipPath id="pe39a69f266">
+   <rect x="696.96" y="171.72" width="195.84" height="103.68"/>
+  </clipPath>
+  <clipPath id="p1375849ed6">
+   <rect x="915.84" y="171.72" width="195.84" height="103.68"/>
+  </clipPath>
+  <clipPath id="p9cc6585e9a">
+   <rect x="783.36" y="336.96" width="328.32" height="194.4"/>
+  </clipPath>
+ </defs>
+</svg>

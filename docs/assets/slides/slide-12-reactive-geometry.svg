@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-21T15:08:16.907054</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.3472 480.7512 
+L 736.0128 480.7512 
+Q 753.5808 480.7512 753.5808 473.2992 
+L 753.5808 181.1808 
+Q 753.5808 173.7288 736.0128 173.7288 
+L 47.3472 173.7288 
+Q 29.7792 173.7288 29.7792 181.1808 
+L 29.7792 473.2992 
+Q 29.7792 480.7512 47.3472 480.7512 
+z
+" clip-path="url(#pdcbe8c5307)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 541.008 324.2592 
+C 541.008 312.010261 531.932355 300.250477 515.794814 291.58917 
+C 499.657274 282.927862 477.746728 278.0568 454.9248 278.0568 
+C 432.102872 278.0568 410.192326 282.927862 394.054786 291.58917 
+C 377.917245 300.250477 368.8416 312.010261 368.8416 324.2592 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #0053d6; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 85.9968 324.2592 
+L 152.7552 324.2592 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #132b3d; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 161.89056 303.3936 
+L 161.89056 258.6816 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #132b3d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 171.72864 303.3936 
+L 171.72864 258.6816 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #132b3d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 184.3776 324.2592 
+L 247.6224 324.2592 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #132b3d; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 307.3536 324.2592 
+L 412.7616 324.2592 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #6750a4; stroke-width: 2"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 493.5744 324.2592 
+L 581.4144 324.2592 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #e6613e; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 627.0912 309.3552 
+L 665.7408 270.6048 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #e6613e; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 627.0912 339.1632 
+L 665.7408 377.9136 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke: #e6613e; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 275.7312 343.6344 
+L 275.7312 379.404 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #6750a4; stroke-opacity: 0.5; stroke-width: 0.8"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 454.9248 343.6344 
+L 454.9248 379.404 
+" clip-path="url(#pdcbe8c5307)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #6750a4; stroke-opacity: 0.5; stroke-width: 0.8"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="64.9152" y="207.482456" transform="rotate(-0 64.9152 207.482456)">Generic carboxylate methyl transfer</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #132b3d" x="68.4288" y="329.454512" transform="rotate(-0 68.4288 329.454512)">R</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #132b3d" x="166.8096" y="329.454512" transform="rotate(-0 166.8096 329.454512)">C</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #132b3d" x="166.8096" y="247.482512" transform="rotate(-0 166.8096 247.482512)">O</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6750a4" x="275.7312" y="330.233809" transform="rotate(-0 275.7312 330.233809)">O⁻</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #132b3d" x="454.9248" y="330.233809" transform="rotate(-0 454.9248 330.233809)">CH₃</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #e6613e" x="609.5232" y="330.233809" transform="rotate(-0 609.5232 330.233809)">S⁺</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #e6613e" x="686.8224" y="260.172" transform="rotate(-0 686.8224 260.172)">Ado</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e6613e" transform="translate(680.985219 406.863019)">Met</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e6613e" transform="translate(667.206312 418.048175)">fragment</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0053d6" x="454.9248" y="263.1528" transform="rotate(-0 454.9248 263.1528)">θ</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 279.518811 371.952 
+Q 365.328332 371.952 451.137853 371.952 
+" style="fill: none; stroke: #6750a4; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 284.318811 374.352 
+L 279.518811 371.952 
+L 284.318811 369.552 
+" style="fill: none; stroke: #6750a4; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 446.337853 369.552 
+L 451.137853 371.952 
+L 446.337853 374.352 
+" style="fill: none; stroke: #6750a4; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6750a4" x="365.328" y="397.2888" transform="rotate(-0 365.328 397.2888)">d(O, C)</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="64.9152" y="453.924" transform="rotate(-0 64.9152 453.924)">R–COO⁻ + SAM → R–COOCH₃ + SAH</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 809.4528 480.7512 
+L 1108.6272 480.7512 
+Q 1116.2592 480.7512 1116.2592 473.2992 
+L 1116.2592 181.1808 
+Q 1116.2592 173.7288 1108.6272 173.7288 
+L 809.4528 173.7288 
+Q 801.8208 173.7288 801.8208 181.1808 
+L 801.8208 473.2992 
+Q 801.8208 480.7512 809.4528 480.7512 
+z
+" clip-path="url(#p95ccf36c85)" style="fill: #f0edf8"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="827.7696" y="213.444056" transform="rotate(-0 827.7696 213.444056)">Geometry as a check</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="827.7696" y="258.857325" transform="rotate(-0 827.7696 258.857325)">Distance</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="827.7696" y="281.943881" transform="rotate(-0 827.7696 281.943881)">Acceptor O to methyl C</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0053d6" x="827.7696" y="327.415725" transform="rotate(-0 827.7696 327.415725)">Direction</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="827.7696" y="350.502281" transform="rotate(-0 827.7696 350.502281)">O–C–S angle at methyl C</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="827.7696" y="401.935725" transform="rotate(-0 827.7696 401.935725)">Also inspect</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #586a77" transform="translate(827.7696 427.436344)">Charge and protonation</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #586a77" transform="translate(827.7696 443.186344)">Stereochemistry and clashes</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #586a77" transform="translate(827.7696 458.936344)">Alternative poses</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="40.32" y="34.344" transform="rotate(-0 40.32 34.344)">CHEMICAL INTERPRETATION | SLIDE 12</text>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 27px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="40.32" y="74.52" transform="rotate(-0 40.32 74.52)">Binding plausibility is not catalytic competence.</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="104.976" transform="rotate(-0 40.32 104.976)">Ask whether the reacting atoms can adopt a chemically sensible arrangement.</text>
+  </g>
+  <g id="text_23">
+   <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="57.6" y="532.008" transform="rotate(-0 57.6 532.008)">In-line attack is a chemical hypothesis, not a universal numerical cutoff.</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="57.6" y="566.352" transform="rotate(-0 57.6 566.352)">A static pose alone does not establish transition-state access, mechanism or reaction rate.</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="620.136" transform="rotate(-0 40.32 620.136)">Generic geometry and mechanistic context: https://pmc.ncbi.nlm.nih.gov/articles/PMC6503465/</text>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="633.744" transform="rotate(-0 40.32 633.744)">Idealised explanatory schematic, not an enzyme model or a transition-state calculation. No target-specific geometry or result is shown.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdcbe8c5307">
+   <rect x="40.32" y="178.2" width="702.72" height="298.08"/>
+  </clipPath>
+  <clipPath id="p95ccf36c85">
+   <rect x="806.4" y="178.2" width="305.28" height="298.08"/>
+  </clipPath>
+ </defs>
+</svg>

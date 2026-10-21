@@ -1,0 +1,196 @@
+{
+  "title": "Modern structural bioinformatics: complete 45-minute lecture",
+  "duration_seconds": 2700,
+  "slides": [
+    {
+      "slide": 1,
+      "file_stem": "slide-01-modern-structural-bioinformatics",
+      "title": "Modern structural bioinformatics",
+      "lecture_time": "00:00\u201301:30",
+      "duration_seconds": 90,
+      "sources": [
+        "https://files.rcsb.org/download/1MBN.pdb"
+      ],
+      "visual_provenance": "Experimental-coordinate cartoon used as an illustration; no target-specific inference."
+    },
+    {
+      "slide": 2,
+      "file_stem": "slide-02-evidence-framework",
+      "title": "A structure is evidence, not an answer.",
+      "lecture_time": "01:30\u201304:00",
+      "duration_seconds": 150,
+      "sources": [],
+      "visual_provenance": "Original instructional schematic, with no experimental or computational result implied."
+    },
+    {
+      "slide": 3,
+      "file_stem": "slide-03-evolutionary-information",
+      "title": "Evolution leaves structural clues in sequences.",
+      "lecture_time": "04:00\u201307:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://evcouplings.org/"
+      ],
+      "visual_provenance": "Explicitly synthetic MSA and hypothetical contact schematic; not a calculated coupling map."
+    },
+    {
+      "slide": 4,
+      "file_stem": "slide-04-protein-language-models",
+      "title": "Learning the language of proteins.",
+      "lecture_time": "07:00\u201310:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://github.com/Biohub/esm"
+      ],
+      "visual_provenance": "Conceptual representation/task diagram. No embedding, training or ESM inference was performed."
+    },
+    {
+      "slide": 5,
+      "file_stem": "slide-05-retrieve-or-predict",
+      "title": "Retrieve a model, or make a prediction?",
+      "lecture_time": "10:00\u201312:00",
+      "duration_seconds": 120,
+      "sources": [
+        "https://alphafold.ebi.ac.uk/files/AF-P0DP23-F1-model_v6.cif",
+        "https://alphafoldserver.com/guides",
+        "https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md"
+      ],
+      "visual_provenance": "Existing AFDB molecular model plus an explicitly schematic new-prediction input route."
+    },
+    {
+      "slide": 6,
+      "file_stem": "slide-06-calmodulin-confidence",
+      "title": "Confident local folds. Uncertain relative placement.",
+      "lecture_time": "12:00\u201316:00",
+      "duration_seconds": 240,
+      "sources": [
+        "https://alphafold.ebi.ac.uk/files/AF-P0DP23-F1-model_v6.cif",
+        "https://alphafold.ebi.ac.uk/files/AF-P0DP23-F1-predicted_aligned_error_v6.json"
+      ],
+      "visual_provenance": "Actual saved molecular coordinates and calculated data; see teaching pack for full methods."
+    },
+    {
+      "slide": 7,
+      "file_stem": "slide-07-calmodulin-structural-context",
+      "title": "A prediction is not a unique biological state.",
+      "lecture_time": "16:00\u201319:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://files.rcsb.org/download/1CLL.pdb",
+        "https://alphafold.ebi.ac.uk/files/AF-P0DP23-F1-model_v6.cif"
+      ],
+      "visual_provenance": "Actual saved molecular coordinates and calculated data; see teaching pack for full methods."
+    },
+    {
+      "slide": 8,
+      "file_stem": "slide-08-globin-search",
+      "title": "Search broadly. Then choose a comparison worth inspecting.",
+      "lecture_time": "19:00\u201322:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://files.rcsb.org/download/1MBN.pdb",
+        "https://search.foldseek.com/api/databases",
+        "https://www.nature.com/articles/s41592-025-02593-7"
+      ],
+      "visual_provenance": "Actual saved molecular coordinates and calculated data; see teaching pack for full methods.",
+      "database_caveat": "PDB100 is redundancy-reduced, not guaranteed one hit per unique amino-acid sequence. The precise cause of these monomer duplicates is unestablished."
+    },
+    {
+      "slide": 9,
+      "file_stem": "slide-09-globin-comparison",
+      "title": "A shared structural core despite little sequence identity.",
+      "lecture_time": "22:00\u201326:00",
+      "duration_seconds": 240,
+      "sources": [
+        "https://files.rcsb.org/download/1MBN.pdb",
+        "https://files.rcsb.org/download/1FSL.pdb"
+      ],
+      "visual_provenance": "Actual saved molecular coordinates and calculated data; see teaching pack for full methods."
+    },
+    {
+      "slide": 10,
+      "file_stem": "slide-10-protein-assemblies",
+      "title": "From one chain to an assembly.",
+      "lecture_time": "26:00\u201329:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://files.rcsb.org/download/1BRS.pdb",
+        "https://alphafoldserver.com/guides"
+      ],
+      "visual_provenance": "Actual 1BRS chains A/D, author-assigned assembly 1; no AI output or interface-confidence matrix invented."
+    },
+    {
+      "slide": 11,
+      "file_stem": "slide-11-protein-ligand-hypotheses",
+      "title": "From protein and molecule to a binding hypothesis.",
+      "lecture_time": "29:00\u201332:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://files.rcsb.org/download/4W52.pdb",
+        "https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md"
+      ],
+      "visual_provenance": "Experimental 4W52 reference and an explicitly schematic prediction workflow; input example provided, no Boltz inference performed."
+    },
+    {
+      "slide": 12,
+      "file_stem": "slide-12-reactive-geometry",
+      "title": "Binding plausibility is not catalytic competence.",
+      "lecture_time": "32:00\u201335:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6503465/"
+      ],
+      "visual_provenance": "Original generic carboxylate/SAM SN2 schematic. No computed distances, target poses or transition state claimed."
+    },
+    {
+      "slide": 13,
+      "file_stem": "slide-13-conformational-ensembles",
+      "title": "One structure is not an ensemble.",
+      "lecture_time": "35:00\u201338:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://files.rcsb.org/download/4AKE.pdb",
+        "https://files.rcsb.org/download/1AKE.pdb",
+        "https://github.com/microsoft/bioemu",
+        "https://doi.org/10.1126/science.adv9817"
+      ],
+      "visual_provenance": "Actual experimental 4AKE/1AKE views plus an output schematic; no new BioEmu ensemble, trajectory or populations."
+    },
+    {
+      "slide": 14,
+      "file_stem": "slide-14-constrained-design",
+      "title": "Design reverses the question.",
+      "lecture_time": "38:00\u201341:00",
+      "duration_seconds": 180,
+      "sources": [
+        "https://github.com/RosettaCommons/RFdiffusion/blob/main/examples/design_ppi.sh",
+        "https://raw.githubusercontent.com/RosettaCommons/RFdiffusion/main/examples/input_pdbs/insulin_target.pdb",
+        "https://www.ipd.uw.edu/2025/12/rfdiffusion3-now-available/"
+      ],
+      "visual_provenance": "Actual theoretical-model input from the official classic example; no generated binder. Family update is separately labelled."
+    },
+    {
+      "slide": 15,
+      "file_stem": "slide-15-evidence-chain",
+      "title": "Build an evidence chain, not a gallery of models.",
+      "lecture_time": "41:00\u201343:00",
+      "duration_seconds": 120,
+      "sources": [],
+      "visual_provenance": "Original synthesis diagram and student rubric; no target-specific result."
+    },
+    {
+      "slide": 16,
+      "file_stem": "slide-16-mnmt4-practical-handover",
+      "title": "Your investigation begins here.",
+      "lecture_time": "43:00\u201345:00",
+      "duration_seconds": 120,
+      "sources": [
+        "https://rest.uniprot.org/uniprotkb/V5X766.txt"
+      ],
+      "visual_provenance": "Known case identity and biochemical input list only; no MnMT4 structural or mechanistic results."
+    }
+  ],
+  "format": "Finished PNG/SVG image-based lecture; no PowerPoint or PDF assumed.",
+  "first_nine_match_current_source": true,
+  "revision": "Slide 8 PDB100 caveat added; the other 15 slide images are unchanged."
+}

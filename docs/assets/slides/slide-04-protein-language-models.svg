@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-21T10:33:32.355572</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 48.6144 411.3504 
+L 296.9856 411.3504 
+Q 303.3216 411.3504 303.3216 406.1664 
+L 303.3216 202.9536 
+Q 303.3216 197.7696 296.9856 197.7696 
+L 48.6144 197.7696 
+Q 42.2784 197.7696 42.2784 202.9536 
+L 42.2784 406.1664 
+Q 42.2784 411.3504 48.6144 411.3504 
+z
+" clip-path="url(#p2cfa939ff1)" style="fill: #f1f6f8"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="63.8208" y="233.567569" transform="rotate(-0 63.8208 233.567569)">Many protein sequences</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #006e7d" x="66.3552" y="271.3824" transform="rotate(-0 66.3552 271.3824)">MALW...KQAV</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #006e7d; opacity: 0.8" x="66.3552" y="302.4864" transform="rotate(-0 66.3552 302.4864)">MVLG...DLEK</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #006e7d; opacity: 0.6" x="66.3552" y="333.5904" transform="rotate(-0 66.3552 333.5904)">MGSA...RVAA</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #006e7d; opacity: 0.4" x="66.3552" y="364.6944" transform="rotate(-0 66.3552 364.6944)">MKKI...LNAD</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 394.6752 414.6876 
+L 688.2048 414.6876 
+Q 695.6928 414.6876 695.6928 409.3416 
+L 695.6928 199.7784 
+Q 695.6928 194.4324 688.2048 194.4324 
+L 394.6752 194.4324 
+Q 387.1872 194.4324 387.1872 199.7784 
+L 387.1872 409.3416 
+Q 387.1872 414.6876 394.6752 414.6876 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #e6f2f2"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 415.6416 372.9888 
+L 434.81088 372.9888 
+L 434.81088 306.6984 
+L 415.6416 306.6984 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.25"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 446.79168 372.9888 
+L 465.96096 372.9888 
+L 465.96096 332.3592 
+L 446.79168 332.3592 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.32"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 477.94176 372.9888 
+L 497.11104 372.9888 
+L 497.11104 315.252 
+L 477.94176 315.252 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.39"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 509.09184 372.9888 
+L 528.26112 372.9888 
+L 528.26112 349.4664 
+L 509.09184 349.4664 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.46"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 540.24192 372.9888 
+L 559.4112 372.9888 
+L 559.4112 310.9752 
+L 540.24192 310.9752 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.53"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 571.392 372.9888 
+L 590.56128 372.9888 
+L 590.56128 325.944 
+L 571.392 325.944 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.6"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 602.54208 372.9888 
+L 621.71136 372.9888 
+L 621.71136 343.0512 
+L 602.54208 343.0512 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.67"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 633.69216 372.9888 
+L 652.86144 372.9888 
+L 652.86144 319.5288 
+L 633.69216 319.5288 
+z
+" clip-path="url(#pabd16c6fdb)" style="fill: #006e7d; opacity: 0.74"/>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="412.6464" y="231.040369" transform="rotate(-0 412.6464 231.040369)">Sequence representation</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="412.6464" y="261.792" transform="rotate(-0 412.6464 261.792)">ESMC</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="412.6464" y="399.7188" transform="rotate(-0 412.6464 399.7188)">Conceptual feature display; not actual embeddings.</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_12">
+    <path d="M 832.2048 290.4012 
+L 1103.1552 290.4012 
+Q 1110.0672 290.4012 1110.0672 286.9992 
+L 1110.0672 153.6408 
+Q 1110.0672 150.2388 1103.1552 150.2388 
+L 832.2048 150.2388 
+Q 825.2928 150.2388 825.2928 153.6408 
+L 825.2928 286.9992 
+Q 825.2928 290.4012 832.2048 290.4012 
+z
+" clip-path="url(#p837051959e)" style="fill: #eaf0fc"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0053d6" x="848.7936" y="182.2176" transform="rotate(-0 848.7936 182.2176)">Structure prediction</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="848.7936" y="225.7632" transform="rotate(-0 848.7936 225.7632)">ESMFold2</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="848.7936" y="265.2264" transform="rotate(-0 848.7936 265.2264)">Representation → 3D model</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_13">
+    <path d="M 832.2048 477.9324 
+L 1103.1552 477.9324 
+Q 1110.0672 477.9324 1110.0672 475.1784 
+L 1110.0672 367.2216 
+Q 1110.0672 364.4676 1103.1552 364.4676 
+L 832.2048 364.4676 
+Q 825.2928 364.4676 825.2928 367.2216 
+L 825.2928 475.1784 
+Q 825.2928 477.9324 832.2048 477.9324 
+z
+" clip-path="url(#pb6358838d9)" style="fill: #f0edf8"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6750a4" x="848.7936" y="393.66" transform="rotate(-0 848.7936 393.66)">Other downstream analyses</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="848.7936" y="438.8256" transform="rotate(-0 848.7936 438.8256)">Depend on the task and model.</text>
+   </g>
+  </g>
+  <g id="patch_14">
+   <path d="M 313.040953 304.56 
+Q 346.750368 304.56 378.447321 304.56 
+" style="fill: none; stroke: #006e7d; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 372.447321 301.56 
+L 378.447321 304.56 
+L 372.447321 307.56 
+z
+" style="fill: #006e7d; stroke: #006e7d; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="patch_15">
+   <path d="M 704.579766 271.427717 
+Q 760.317717 249.480899 814.183138 228.27139 
+" style="fill: none; stroke: #0053d6; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 807.501211 227.678216 
+L 814.183138 228.27139 
+L 809.699443 233.261027 
+z
+" style="fill: #0053d6; stroke: #0053d6; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="patch_16">
+   <path d="M 704.460234 350.898882 
+Q 760.319294 382.319603 814.424342 412.753692 
+" style="fill: none; stroke: #6750a4; stroke-width: 1.8; stroke-linecap: round"/>
+   <path d="M 810.665672 407.197398 
+L 814.424342 412.753692 
+L 807.724105 412.426851 
+z
+" style="fill: #6750a4; stroke: #6750a4; stroke-width: 1.8; stroke-linecap: round"/>
+  </g>
+  <g id="patch_17">
+   <path d="M 967.68 138.726264 
+Q 967.68 142.233406 967.68 144.287104 
+" style="fill: none; stroke: #0053d6; stroke-width: 1.3; stroke-linecap: round"/>
+   <path d="M 970.68 138.287104 
+L 967.68 144.287104 
+L 964.68 138.287104 
+z
+" style="fill: #0053d6; stroke: #0053d6; stroke-width: 1.3; stroke-linecap: round"/>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="40.32" y="34.344" transform="rotate(-0 40.32 34.344)">PROTEIN LANGUAGE MODELS | SLIDE 4</text>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 27px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="40.32" y="74.52" transform="rotate(-0 40.32 74.52)">Learning the language of proteins.</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="104.976" transform="rotate(-0 40.32 104.976)">A learned representation is not yet a structural answer.</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586a77" x="345.6" y="275.4" transform="rotate(-0 345.6 275.4)">Learn</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0053d6" x="875.52" y="126.36" transform="rotate(-0 875.52 126.36)">Optional MSA input</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #132b3d" x="57.6" y="514.512" transform="rotate(-0 57.6 514.512)">Ask: what was learned, what is being predicted, and how was it validated?</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #006e7d" x="57.6" y="554.04" transform="rotate(-0 57.6 554.04)">Protein language model ≠ structure predictor</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="620.136" transform="rotate(-0 40.32 620.136)">Model distinctions: https://github.com/Biohub/esm</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #586a77" x="40.32" y="633.744" transform="rotate(-0 40.32 633.744)">ESMC supplies learned representations; ESMFold2 combines representations with a structure-prediction architecture and supports optional MSA input.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2cfa939ff1">
+   <rect x="46.08" y="200.88" width="253.44" height="207.36"/>
+  </clipPath>
+  <clipPath id="pabd16c6fdb">
+   <rect x="391.68" y="197.64" width="299.52" height="213.84"/>
+  </clipPath>
+  <clipPath id="p837051959e">
+   <rect x="829.44" y="152.28" width="276.48" height="136.08"/>
+  </clipPath>
+  <clipPath id="pb6358838d9">
+   <rect x="829.44" y="366.12" width="276.48" height="110.16"/>
+  </clipPath>
+ </defs>
+</svg>
