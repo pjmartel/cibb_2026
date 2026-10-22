@@ -7,11 +7,14 @@
 - At 375px, open Menu, follow a link, reopen it, and close with Escape.
 
 ## Slides
-- Start: slides.html#slide-8.
-- Expect slide 8 selected, including the PDB100 caveat in the existing image.
-- Exercise Next, Previous, slide selection, thumbnails, Home/End and arrow keys.
-- First/last buttons have correct disabled states.
-- Open PNG opens the selected high-resolution image; download all slides remains available.
+- Start: slides.html, also following the home-page lecture links.
+- Expect a simple PDF page with Open lecture PDF, Download lecture PDF and companion notes.
+- Open lecture PDF opens downloads/TSB_2026.pdf in a new tab; Download lecture PDF saves the same bytes on normal static hosting.
+- The approved PowerPoint export has 17 pages; keep it unchanged. Page count must not be tied to the archived 16-image manifest.
+- No carousel, image ZIP or editable SVG download is offered on the active slides page.
+- Replacing the one published PDF and rebuilding preserves the exact new source bytes.
+- Before generation, a missing or clearly invalid PDF produces an actionable error without rewriting pages.
+- Retain the archived PNG/SVG assets and all PyMOL scripts; no PowerPoint is added.
 
 ## Notes and practical
 - Download lecture notes and notes template; follow an in-page heading link.
@@ -35,5 +38,7 @@
 ## Visual and error checks
 - Render all seven pages at desktop and 375px without page overflow or new runtime errors.
 - Inspect the changed toolkit's beginning, examples, warnings and footer.
-- Check no-result resource state and slide boundary states.
-- Check JavaScript-disabled navigation and direct slide thumbnails.
+- Check no-result resource state and reset.
+- Check JavaScript-disabled navigation and both direct PDF links.
+- Test old slides.html#slide-8 links still reach the new PDF page.
+- Compare PDF checksums after downloading; distinguish hosted-preview inline rendering from GitHub Pages download behavior.

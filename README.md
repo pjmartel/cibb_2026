@@ -1,6 +1,6 @@
 # Tools for structural Bioinformatics
 
-`CIBB_2026` is the course repository for a 45-minute online lecture followed by a 45-minute practical, for MSc, PhD and research-level bioscience students. It contains a static GitHub Pages site, the current 16-slide lecture, student notes, resource links and tested PyMOL helpers.
+`CIBB_2026` is the course repository for a 45-minute online lecture followed by a 45-minute practical, for MSc, PhD and research-level bioscience students. It contains a static GitHub Pages site, the instructor-supplied lecture PDF, student notes, resource links and tested PyMOL helpers.
 
 The practical is explicitly **in preparation**. Its page and directories are ready for future material; there is no implied completed worksheet, model pack or MnMT4 answer key.
 
@@ -89,8 +89,8 @@ CIBB_2026/
 │   ├── toolkit.html
 │   ├── resources.html
 │   ├── sources.html
-│   ├── assets/                  # Real molecular views + 16 PNG/SVG slides
-│   └── downloads/               # Slides, notes and PyMOL toolkit
+│   ├── assets/                  # Real molecular views + archived PNG/SVG sources
+│   └── downloads/               # TSB_2026.pdf, notes and PyMOL toolkit
 ├── web/
 │   ├── base.css
 │   ├── site.css
@@ -138,7 +138,15 @@ python tools/check_repo.py
 python -m unittest discover -s tests -v
 ```
 
-The slide viewer reads the local slide manifest; source PNG/SVG pairs are in `docs/assets/slides/`. Replacing slide assets and rebuilding updates the student download bundle without requiring an external slide-hosting service.
+### Updating the lecture PDF
+
+Keep PowerPoint as your authoring master outside the public repository. Export the complete presentation as a PDF and replace **`docs/downloads/TSB_2026.pdf`** with that export. This is the single authoritative PDF; do not edit `docs/slides.html` or replace the old image assets.
+
+Run the build, validation and tests shown above, then review and commit the changed files and push from your existing checkout. The existing GitHub Actions workflow publishes the update; no Pages settings change is needed.
+
+The current supplied export intentionally has 17 pages. The page and build do not require a fixed slide count, so later exports can contain more or fewer pages without updating a manifest. The build checks for a complete PDF header/trailer before generating pages and never modifies, recompresses or regenerates your PDF from the old images.
+
+The slides page offers **Open lecture PDF**, **Download lecture PDF** and companion notes, without a carousel or image ZIP links. The file size updates on each build. Original PNG/SVG files, their old manifest, viewer script and image ZIP remain as legacy assets, not as the lecture publication master; the build no longer creates the image ZIP. The private hosted preview may open binary downloads inline; a browser's PDF viewer also provides Save/Download.
 
 ## PyMOL helpers
 
@@ -167,4 +175,4 @@ The lecture includes the explicit PDB100 caveat: redundancy reduction does not g
 
 All included text files use UTF-8 and Unix LF line endings, including Python, PML, Markdown, HTML, CSS, JavaScript, JSON, YAML and the example coordinate files. `tools/check_repo.py` verifies those conditions, local links, slide availability and the absence of machine-specific paths.
 
-The slide images and examples work without live prediction services. Fonts use an optional Fontshare CDN with local system fallbacks; external tool sites require network access and may require accounts or suitable compute.
+The lecture PDF and examples work without live prediction services. Fonts use an optional Fontshare CDN with local system fallbacks; external tool sites require network access and may require accounts or suitable compute.

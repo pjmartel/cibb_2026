@@ -1,4 +1,4 @@
-"""Offline validation: text hygiene, static paths, availability and slide files."""
+"""Offline validation: text hygiene, static paths, supplied PDF and downloads."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
@@ -87,19 +87,26 @@ for name, page in pages.items():
         target = (DOCS / unquote(url.path)).resolve()
         if not target.is_relative_to(DOCS.resolve()) or not target.is_file():
             errors.append(f"Missing local target: {name} → {reference}")
-        if url.fragment and target.name in pages and not url.fragment.startswith("slide-"):
+        if url.fragment and target.name in pages:
             if url.fragment not in pages[target.name].ids:
                 errors.append(f"Missing fragment: {name} → {reference}")
-slides = json.loads((DOCS / "assets/slides/slide-manifest.json").read_text())["slides"]
-if len(slides) != 16 or sum(s["duration_seconds"] for s in slides) != 2700:
-    errors.append("Unexpected slide count or lecture duration")
-for row in slides:
-    for ext in ("png", "svg"):
-        if not (DOCS / "assets/slides" / (row["file_stem"] + "." + ext)).is_file():
-            errors.append(f"Missing slide: {row['slide']} {ext}")
-slide8 = next(r for r in slides if r["slide"] == 8)
-if "PDB100 is redundancy-reduced" not in (DOCS / "assets/slides" / (slide8["file_stem"] + ".svg")).read_text():
-    errors.append("Missing verified PDB100 slide caveat")
+lecture_pdf = DOCS / "downloads/TSB_2026.pdf"
+if not lecture_pdf.is_file():
+    errors.append("Missing lecture PDF: docs/downloads/TSB_2026.pdf")
+else:
+    raw_pdf = lecture_pdf.read_bytes()
+    if not raw_pdf.startswith(b"%PDF-") or b"%%EOF" not in raw_pdf[-2048:]:
+        errors.append("Invalid or incomplete lecture PDF")
+slides_html = (DOCS / "slides.html").read_text(encoding="utf-8")
+if slides_html.count('href="downloads/TSB_2026.pdf"') != 2:
+    errors.append("Slides page must offer both Open and Download links to the supplied PDF")
+if 'download="TSB_2026.pdf"' not in slides_html or 'target="_blank"' not in slides_html:
+    errors.append("Missing PDF download or new-tab action")
+if any(old in slides_html for old in ("lecture-slides.zip", 'id="current-slide"', 'id="slide-data"', "assets/slides.js", ".svg")):
+    errors.append("Slides page still offers the old image viewer or image downloads")
+for note in (ROOT / "content/notes.md", DOCS / "downloads/lecture-notes.md"):
+    if "PDB100" not in note.read_text(encoding="utf-8"):
+        errors.append(f"Missing PDB100 companion-note caveat: {note.relative_to(ROOT)}")
 for path in (DOCS / "downloads").glob("*.zip"):
     with ZipFile(path) as archive:
         if archive.testzip():
@@ -147,4 +154,4 @@ else:
 if errors:
     print("\n".join(errors), file=sys.stderr)
     raise SystemExit(1)
-print(f"PASS: {len(pages)} pages, {len(slides)} slides, {text_files} UTF-8/LF text files, local links, ZIPs and workflow cache path valid.")
+print(f"PASS: {len(pages)} pages, supplied lecture PDF, {text_files} UTF-8/LF text files, local links, ZIPs and workflow cache path valid.")

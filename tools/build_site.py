@@ -12,7 +12,14 @@ DOCS = ROOT / "docs"
 CONFIG = json.loads((ROOT / "course.json").read_text())
 TITLE = CONFIG["title"]
 PRACTICAL_READY = CONFIG["practical_status"] == "ready"
-SLIDES = json.loads((DOCS / "assets/slides/slide-manifest.json").read_text())["slides"]
+# This supplied PDF is the publication master. Never regenerate it from images.
+LECTURE_PDF = DOCS / "downloads/TSB_2026.pdf"
+if not LECTURE_PDF.is_file():
+    raise SystemExit("Missing lecture PDF: place your PowerPoint PDF export at docs/downloads/TSB_2026.pdf, then rebuild.")
+pdf_bytes = LECTURE_PDF.read_bytes()
+if not pdf_bytes.startswith(b"%PDF-") or b"%%EOF" not in pdf_bytes[-2048:]:
+    raise SystemExit("Invalid lecture PDF: export a complete PDF to docs/downloads/TSB_2026.pdf, then rebuild.")
+PDF_SIZE = f"{len(pdf_bytes) / 1_000_000:.1f} MB"
 NAV = [("notes.html", "Student notes"), ("slides.html", "Slides"), ("practical.html", "Practical"),
        ("toolkit.html", "PyMOL toolkit"), ("resources.html", "Resources")]
 
@@ -88,8 +95,8 @@ f'''<main id="main"><div class="wrap">
 <div class="course-strip"><span><strong>45 min</strong> online lecture</span><span><strong>45 min</strong> practical</span><span><strong>MSc / PhD</strong> biosciences</span></div>
 <section class="section" aria-labelledby="materials-title"><div class="section-heading"><h2 id="materials-title">Class materials</h2>
 <p>Follow the lecture, keep an evidence record, and get your molecular workspace ready.</p></div>
-<div class="materials"><article class="featured-material"><p class="eyebrow">Lecture / 16 slides</p>
-<a href="slides.html#slide-8"><img src="assets/images/foldseek-search.webp" width="1200" height="675" loading="lazy" alt="Lecture slide showing the real myoglobin Foldseek search and the PDB100 caveat"></a>
+<div class="materials"><article class="featured-material"><p class="eyebrow">Lecture / PDF</p>
+<a href="slides.html"><img src="assets/images/foldseek-search.webp" width="1200" height="675" loading="lazy" alt="Lecture illustration showing the real myoglobin Foldseek search and the PDB100 caveat"></a>
 <h3><a href="slides.html">The structural evidence workflow</a></h3><p>Sequence information, model assessment, structural search, complexes, ensembles and design.</p>
 <a class="text-link" href="slides.html">View the lecture <span aria-hidden="true">→</span></a></article>
 <div><a class="material-link" href="notes.html"><div class="row"><h3>Student notes</h3><span class="arrow" aria-hidden="true">↗</span></div><p>A lecture companion with key distinctions, primary links and a downloadable notes template.</p></a>
@@ -109,20 +116,13 @@ reading_page("practical.html", "Practical", status, ROOT / "content/practical.md
              "The 45-minute practical will apply the lecture framework to MnMT4. Materials are clearly marked according to their current availability.",
              '<a class="button secondary" href="toolkit.html">Prepare PyMOL</a><a class="text-link" href="resources.html">Browse resources →</a>')
 
-options = "".join(f'<option value="{i}">{r["slide"]:02d} · {escape(r["title"])}</option>' for i, r in enumerate(SLIDES))
-thumbs = "".join(f'''<a class="slide-thumb" href="assets/slides/{r['file_stem']}.png" target="_blank" rel="noopener" data-slide-index="{i}" aria-current="{'true' if i==0 else 'false'}" aria-label="Show slide {r['slide']}: {escape(r['title'])}">
-<img src="assets/slides/{r['file_stem']}.png" width="320" height="180" loading="lazy" alt=""><span>{r['slide']:02d} / {escape(r['title'])}</span></a>''' for i, r in enumerate(SLIDES))
-first = SLIDES[0]
-page("slides.html", "Lecture slides", "Browse the sixteen-slide lecture, use keyboard navigation, open individual slides, or download the PNG and editable-text SVG files.",
-     f'''<main id="main" class="wrap">{heading("45-minute lecture / 16 slides","Lecture slides","Use the arrows or slide selector. The download includes high-resolution PNGs and editable-text SVGs; this is not a PowerPoint file.",
-     '<a class="button" href="downloads/lecture-slides.zip" download>Download all slides</a><a class="text-link" href="notes.html">Read companion notes →</a>')}
-<section class="slide-shell" aria-label="Slide viewer"><div class="slide-frame"><img id="current-slide" src="assets/slides/{first['file_stem']}.png" width="3200" height="1800" alt="Slide 1: {escape(first['title'])}"></div>
-<div class="slide-controls"><div class="buttons"><button data-slide-previous disabled>← Previous</button><button data-slide-next>Next →</button><a data-slide-image href="assets/slides/{first['file_stem']}.png" target="_blank" rel="noopener">Open PNG ↗</a></div>
-<label><span class="sr-only">Choose a slide</span><select id="slide-select">{options}</select></label></div>
-<p class="slide-description" data-slide-label aria-live="polite">01 / 16 · {escape(first['title'])}</p><p class="notice" data-slide-notice role="status"></p>
-<div class="slide-downloads"><a data-slide-svg href="assets/slides/{first['file_stem']}.svg" download>Download editable SVG</a><span>Keyboard: ← / →, Home / End</span></div>
-<noscript><p>JavaScript is disabled. Each thumbnail below opens its slide PNG, and the complete slide download is available above.</p></noscript><div class="slide-grid">{thumbs}</div></section></main>''',
-     '<script type="application/json" id="slide-data">'+json.dumps(SLIDES, ensure_ascii=False).replace("</", "<\\/")+'</script><script src="assets/slides.js" defer></script>')
+page("slides.html", "Lecture slides", "Open or download the lecture PDF for Tools for structural Bioinformatics, with companion student notes.",
+     f'''<main id="main" class="wrap">{heading("45-minute lecture / PDF","Lecture slides",
+     TITLE + ". Open the lecture in your browser or download a copy to keep.",
+     '<a class="button" href="downloads/TSB_2026.pdf" target="_blank" rel="noopener noreferrer">Open lecture PDF ↗</a>'
+     '<a class="button secondary" href="downloads/TSB_2026.pdf" download="TSB_2026.pdf">Download lecture PDF</a>')}
+<div class="slide-shell"><p class="slide-description">TSB_2026.pdf · PDF · {PDF_SIZE}</p>
+<a class="text-link" href="notes.html">Read companion notes →</a></div></main>''')
 
 toolkit_html, _ = md_file(ROOT / "pymol_scripts/README.md")
 toolkit_html = re.sub(r"<h1\b[^>]*>.*?</h1>", "", toolkit_html, count=1)
@@ -191,7 +191,6 @@ for script in ("ligalign.py", "struct_diff.py"):
 write(downloads / "lecture-notes.md", (ROOT / "content/notes.md").read_text().replace("../docs/assets/", "../assets/"))
 shutil.copy2(ROOT / "content/student-notes-template.md", downloads / "student-notes-template.md")
 for filename, files, base in [
-    ("lecture-slides.zip", sorted((DOCS / "assets/slides").glob("*")), DOCS / "assets"),
     ("pymol-toolkit.zip", sorted((ROOT / "pymol_scripts").rglob("*")), ROOT),
 ]:
     with ZipFile(downloads / filename, "w", compression=ZIP_DEFLATED, compresslevel=6) as z:
@@ -214,4 +213,4 @@ if student_practical:
 else:
     (downloads / "practical-materials.zip").unlink(missing_ok=True)
 
-print(f"Built 7 static pages, {len(SLIDES)} slide entries and student downloads in docs/.")
+print("Built 7 static pages and student downloads in docs/. Supplied lecture PDF preserved unchanged.")

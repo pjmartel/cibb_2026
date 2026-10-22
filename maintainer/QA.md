@@ -5,7 +5,7 @@
 - Official class title and `CIBB_2026` repository identity.
 - Desktop and 375px layouts for every public page; no horizontal overflow.
 - All primary navigation links and mobile open/close/Escape states.
-- Slide next/previous, selector, thumbnail, keyboard, hash deep link, boundary states and high-resolution PNG link.
+- Open and Download lecture PDF links, companion notes, PDF byte preservation and absence of the superseded carousel.
 - Resource search, category filtering, empty state and reset.
 - Slides, notes and toolkit download paths; ZIP integrity.
 - External PyMOL/Foldseek links and visible, selectable URL fallbacks.
@@ -57,3 +57,17 @@ Both individual Python downloads matched the author's source hashes, and the dow
 The incremental update excludes `.github/workflows/` and the lecture assets. No change to the owner's live GitHub repository is implied until the owner applies and pushes the update.
 
 The incremental ZIP was also applied to the previous complete release in a temporary directory, followed by removal of the two superseded files. Validation and lightweight tests passed; the workflow bytes and every lecture-slide asset hash remained unchanged.
+
+## PDF publication update checked on 2026-10-22
+
+The instructor's PowerPoint PDF export intentionally contains 17 pages. Its single publication path is `docs/downloads/TSB_2026.pdf`. The published page offers Open lecture PDF, Download lecture PDF and companion notes, with no carousel or image-download offers; page count is not coupled to the old 16-image manifest.
+
+The supplied export and the PDF downloaded through the local page have identical SHA-256 hashes: `e14ff9866a90f3aa9b2ba5b6a7ab122f622c3075f8fe6d60caae9858ba82b24a`. The PDF was checked using `pdfinfo` and `qpdf --check`, and was not modified or regenerated. The builder's normal validation is a lightweight header/trailer check, not a full PDF parser.
+
+All seven pages were rendered at 1440px and 375px with no horizontal page overflow or JavaScript runtime errors. Browser checks covered PDF open/download, companion notes, notes anchors/downloads, toolkit download, all primary navigation, home return, mobile menu/Escape, resource search/category/empty/reset, and JavaScript-disabled mobile navigation/PDF download. Old slide hash URLs still reach the new slides page. The original stylesheet was preserved.
+
+The existing private preview was updated in place and checked in a fresh browser context. Its PDF open link and resource filtering worked, and the PDF page had no mobile overflow. The private preview proxy renders the Download link inline rather than forcing a download; the browser's PDF viewer can save it. Local static-hosting download was tested and matched the source bytes. Live GitHub Pages has not been updated or tested by this operation.
+
+The repository validator passed. The lightweight test run discovered 17 tests: eight passed and nine optional PyMOL integration tests were skipped because PyMOL was absent in that environment. New publication tests verify byte preservation, independence from the archived slide manifest, and missing/incomplete PDF rejection before rewriting pages.
+
+PyMOL scripts, scientific notes, practical material, original slide assets and the Pages workflow are unchanged. Reading the instructor's WSL checkout succeeded, and the inspected source hashes matched this update's baseline. The local write attempt was denied because the checkout is outside selected workspace roots; no local files, commits or pushes were changed. A separately supplied Git patch and instructions allow the instructor to apply the tested update to the existing checkout.
