@@ -21,7 +21,7 @@ if not pdf_bytes.startswith(b"%PDF-") or b"%%EOF" not in pdf_bytes[-2048:]:
     raise SystemExit("Invalid lecture PDF: export a complete PDF to docs/downloads/TSB_2026.pdf, then rebuild.")
 PDF_SIZE = f"{len(pdf_bytes) / 1_000_000:.1f} MB"
 NAV = [("notes.html", "Student notes"), ("slides.html", "Slides"), ("practical.html", "Practical"),
-       ("toolkit.html", "PyMOL toolkit"), ("resources.html", "Resources")]
+       ("toolkit.html", "PyMOL toolkit"), ("resources.html", "Resources"), ("references.html", "References")]
 
 
 def write(path, text):
@@ -59,7 +59,7 @@ def page(filename, title, description, body, extra=""):
 <nav id="main-navigation" class="main-nav" aria-label="Primary">{links}</nav></div></header>'''
     footer = '''<footer class="site-footer"><div class="wrap footer-inner">
 <p>CIBB 2026 · Tools for structural Bioinformatics</p>
-<p><a href="sources.html">Sources &amp; reuse</a><a href="resources.html">Resource directory</a></p>
+<p><a href="references.html">References</a><a href="sources.html">Sources &amp; reuse</a><a href="resources.html">Resource directory</a></p>
 </div></footer>'''
     write(DOCS / filename, head(title, description) + "<body>" + header + body + footer + extra + "</body></html>\n")
 
@@ -101,7 +101,8 @@ f'''<main id="main"><div class="wrap">
 <a class="text-link" href="slides.html">View the lecture <span aria-hidden="true">→</span></a></article>
 <div><a class="material-link" href="notes.html"><div class="row"><h3>Student notes</h3><span class="arrow" aria-hidden="true">↗</span></div><p>A lecture companion with key distinctions, primary links and a downloadable notes template.</p></a>
 <a class="material-link" href="toolkit.html"><div class="row"><h3>PyMOL toolkit</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Use Paulo Martel's symmetry-aware ligand comparison and structural-difference tools.</p></a>
-<a class="material-link" href="resources.html"><div class="row"><h3>Tools &amp; databases</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Official entry points for the tools used in the class, with access and interpretation notes.</p></a></div></div></section>
+<a class="material-link" href="resources.html"><div class="row"><h3>Tools &amp; databases</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Official entry points for the tools used in the class, with access and interpretation notes.</p></a>
+<a class="material-link" href="references.html"><div class="row"><h3>References</h3><span class="arrow" aria-hidden="true">↗</span></div><p>Primary papers and supporting methods for the lecture, with a downloadable bibliography.</p></a></div></div></section>
 <section class="practical-banner" aria-labelledby="practical-title"><div><span class="status">{"Materials available" if PRACTICAL_READY else "In preparation"}</span><h2 id="practical-title">The MnMT4 practical</h2>
 <p>{"The student worksheet, approved inputs and offline materials are available in the practical section." if PRACTICAL_READY else "A place for the student worksheet, approved inputs and offline materials. The activity will appear here once it has been designed and tested."}</p></div>
 <a class="button secondary" href="practical.html">Practical preparation <span aria-hidden="true">→</span></a></section>
@@ -110,6 +111,11 @@ f'''<main id="main"><div class="wrap">
 reading_page("notes.html", "Student notes", "Lecture companion",
              ROOT / "content/notes.md", "Concepts, caveats and source links to accompany the 45-minute lecture. Keep observations, predictions and hypotheses distinguishable.",
              '<a class="button" href="downloads/lecture-notes.md" download>Download lecture notes</a><a class="button secondary" href="downloads/student-notes-template.md" download>Download notes template</a>')
+
+reading_page("references.html", "References", "Lecture bibliography",
+             ROOT / "content/references.md",
+             "Primary papers and supporting methods for the lecture. Publication records are linked below; case-specific practical sources are reserved for the debrief.",
+             '<a class="button" href="downloads/lecture-references.md" download>Download bibliography</a>')
 
 status = "In preparation" if CONFIG["practical_status"] != "ready" else "Practical"
 reading_page("practical.html", "Practical", status, ROOT / "content/practical.md",
@@ -153,7 +159,11 @@ page("resources.html", "Tools & databases", "Official links to structural-bioinf
 <p class="resource-count" data-resource-count aria-live="polite">{len(CONFIG['resources'])} resources</p>
 <div class="resource-grid">{resource_html}</div><div class="empty" data-empty hidden><h2>No matching resources</h2><p>Try a broader term or reset the topic filter.</p><button class="button secondary" data-reset-resources>Reset filters</button></div></main>''')
 
-sources = '''## Data and molecular figures
+sources = '''## Lecture literature
+
+The [References](references.html) page lists the lecture's primary papers and supporting methods, with a downloadable bibliography. Coordinate records and search provenance are documented separately below.
+
+## Data and molecular figures
 
 The molecular illustrations are renderings of actual coordinate references, not generated protein shapes. The lecture retains experimental-versus-predicted labels and separates illustrative workflows from computed results.
 
@@ -189,6 +199,7 @@ downloads.mkdir(exist_ok=True)
 for script in ("ligalign.py", "struct_diff.py"):
     shutil.copy2(ROOT / "pymol_scripts" / script, downloads / script)
 write(downloads / "lecture-notes.md", (ROOT / "content/notes.md").read_text().replace("../docs/assets/", "../assets/"))
+write(downloads / "lecture-references.md", f"# {TITLE}: lecture references\n\n" + (ROOT / "content/references.md").read_text(encoding="utf-8"))
 shutil.copy2(ROOT / "content/student-notes-template.md", downloads / "student-notes-template.md")
 for filename, files, base in [
     ("pymol-toolkit.zip", sorted((ROOT / "pymol_scripts").rglob("*")), ROOT),
@@ -213,4 +224,4 @@ if student_practical:
 else:
     (downloads / "practical-materials.zip").unlink(missing_ok=True)
 
-print("Built 7 static pages and student downloads in docs/. Supplied lecture PDF preserved unchanged.")
+print("Built 8 static pages and student downloads in docs/. Supplied lecture PDF preserved unchanged.")

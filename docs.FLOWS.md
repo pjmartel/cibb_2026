@@ -2,7 +2,7 @@
 
 ## Navigation and page identity
 - Start: index.html.
-- Click Student notes, Slides, Practical, PyMOL toolkit and Resources, then the CIBB wordmark.
+- Click Student notes, Slides, Practical, PyMOL toolkit, Resources and References, then the CIBB wordmark.
 - Expect the correct page heading each time and the official course title on home.
 - At 375px, open Menu, follow a link, reopen it, and close with Escape.
 
@@ -20,6 +20,17 @@
 - Download lecture notes and notes template; follow an in-page heading link.
 - Practical remains clearly in preparation without answer keys or absent-file download links.
 
+## Lecture references
+- Start from the References navigation entry, home-page material link or Sources & reuse bibliography link.
+- Expect References as the only page h1 and the active navigation entry.
+- Read 18 lecture/supporting citations in three sections, including the corrected Merski 2015 citation.
+- Follow a contents anchor and open a publication in a new tab.
+- Download lecture-references.md: all 18 approved lecture-only entries, without practical citations.
+- No instructor bibliography, case-specific papers or debrief download is exposed by the new page.
+- Repeat at 375px and tablet width; long titles and DOI strings must wrap, and Menu must open/close.
+- With JavaScript disabled, the navigation, references, contents links and Markdown download still work.
+- Rebuild twice: references, download and navigation remain, while PDF and author-script bytes stay unchanged.
+
 ## Resources
 - Search Foldseek: two matching resources.
 - Select an incompatible category or search for a nonexistent term: empty state.
@@ -36,7 +47,7 @@
 - Preserve Unix LF files, the GitHub Actions cache fix and all existing slide assets.
 
 ## Visual and error checks
-- Render all seven pages at desktop and 375px without page overflow or new runtime errors.
+- Render all eight pages at desktop and 375px without page overflow or new runtime errors.
 - Inspect the changed toolkit's beginning, examples, warnings and footer.
 - Check no-result resource state and reset.
 - Check JavaScript-disabled navigation and both direct PDF links.

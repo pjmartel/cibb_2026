@@ -71,3 +71,17 @@ The existing private preview was updated in place and checked in a fresh browser
 The repository validator passed. The lightweight test run discovered 17 tests: eight passed and nine optional PyMOL integration tests were skipped because PyMOL was absent in that environment. New publication tests verify byte preservation, independence from the archived slide manifest, and missing/incomplete PDF rejection before rewriting pages.
 
 PyMOL scripts, scientific notes, practical material, original slide assets and the Pages workflow are unchanged. Reading the instructor's WSL checkout succeeded, and the inspected source hashes matched this update's baseline. The local write attempt was denied because the checkout is outside selected workspace roots; no local files, commits or pushes were changed. A separately supplied Git patch and instructions allow the instructor to apply the tested update to the existing checkout.
+
+## Lecture References entry checked on 2026-10-22
+
+The new References page uses the approved 18-entry lecture-only bibliography. The two instructor/practical-debrief papers and the complete instructor bibliography are not added to the public site. The source is content/references.md; the builder generates references.html and downloads/lecture-references.md, retaining one page h1.
+
+References appears in all eight pages' primary navigation and footer, in the home materials list and in Sources & reuse. The existing reading-page layout, contents links, theme, PDF publication flow and practical availability are retained. The mobile menu also handles tablet widths, and the JavaScript-disabled narrow-screen header is non-sticky so contents anchors are not obscured.
+
+All eight pages were checked at 1440px and 375px without horizontal overflow or new JavaScript runtime errors; navigation was also checked at 768px, 960px, 961px and 1024px. Checks included references contents anchors, a real publication-link popup, bibliography download bytes, home/source-page entry points, mobile Menu/Escape and JavaScript-disabled navigation, download and anchors. Relative links also worked under a project-like /docs/ prefix.
+
+Existing flows checked include resource search, category filtering, empty state/reset, PDF popup and byte-identical download, companion notes, lecture notes/template downloads and toolkit download. Measured reference-page body, metadata, link and button contrasts were at least 6.97:1. The reference source and generated downloads contain only the approved lecture selection.
+
+All 25 tests passed in the Python 3.11 / real PyMOL QA environment. In the lightweight environment, 16 passed and the nine optional PyMOL integration tests were skipped, as intended. The repository validator passed with eight public pages. New tests cover references selection, source links, download consistency, shared navigation, rebuild reproducibility and preservation of PDF, workflow and supplied-script bytes.
+
+The incremental patch contains source and prebuilt static pages, not a new PDF, model pack, toolkit archive or workflow. The GitHub repository, the instructor's WSL files and the live GitHub Pages site have not been changed automatically.

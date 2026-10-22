@@ -116,9 +116,21 @@ for path in (DOCS / "downloads").glob("*.zip"):
                 errors.append(f"Unsafe ZIP member: {name}")
             if Path(name).suffix in TEXT and b"\r" in archive.read(name):
                 errors.append(f"Non-LF ZIP member: {path.name}/{name}")
-expected = {"index.html", "notes.html", "slides.html", "practical.html", "toolkit.html", "resources.html", "sources.html"}
+expected = {"index.html", "notes.html", "slides.html", "practical.html", "toolkit.html", "resources.html", "sources.html", "references.html"}
 if set(pages) != expected:
     errors.append("Unexpected public page set")
+for name, parsed in pages.items():
+    if "references.html" not in parsed.references:
+        errors.append(f"Missing References navigation: {name}")
+reference_source = ROOT / "content/references.md"
+reference_download = DOCS / "downloads/lecture-references.md"
+if not reference_source.is_file() or not reference_download.is_file():
+    errors.append("Missing lecture-only references source or Markdown download")
+else:
+    course_title = json.loads((ROOT / "course.json").read_text(encoding="utf-8"))["title"]
+    expected_download = f"# {course_title}: lecture references\n\n" + reference_source.read_text(encoding="utf-8")
+    if reference_download.read_text(encoding="utf-8") != expected_download:
+        errors.append("Published reference download differs from its lecture-only source")
 source_manifest = ROOT / "pymol_scripts/source-manifest.json"
 if not source_manifest.is_file():
     errors.append("Missing author-script source manifest")
